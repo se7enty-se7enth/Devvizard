@@ -1,0 +1,146 @@
+@use '../core/variables' as v;
+@use '../core/mixins' as m;
+
+.portfolio {
+	&__header {
+		text-align: center;
+		margin-bottom: 50px;
+	}
+
+	&__title {
+		margin-bottom: 15px;
+		font-size: 2.625rem;
+		font-weight: 600;
+	}
+
+	&__subtitle {
+		font-size: 1.375rem;
+		color: #aaaaaa;
+	}
+
+	&__item {
+		margin-bottom: 30px;
+	}
+
+	.portfolio-card {
+		position: relative;
+		padding: 1px;
+		border-radius: 10px;
+		background: rgba(255, 255, 255, 0.08);
+		overflow: hidden;
+		min-height: 350px;
+		display: flex;
+		flex-direction: column;
+
+		transition:
+			transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+			box-shadow 0.4s ease;
+		will-change: transform;
+
+		&:hover {
+			transform: scale(1.01);
+			z-index: 10;
+		}
+
+		&__link {
+			position: absolute;
+			inset: 0;
+			z-index: 5;
+		}
+
+		&__glow {
+			position: absolute;
+			inset: 0;
+			z-index: 1;
+			opacity: 0;
+			transition: opacity 0.5s ease;
+			pointer-events: none;
+
+			background: radial-gradient(
+				400px circle at var(--mouse-x) var(--mouse-y),
+				rgba(255, 255, 255, 0.4),
+				transparent 40%
+			);
+		}
+
+		&:hover .portfolio-card__glow {
+			opacity: 1;
+		}
+
+		&__content {
+			position: relative;
+			z-index: 2;
+			background-color: #0a0a0a;
+			border-radius: 9px;
+			flex: 1;
+			display: flex;
+			flex-direction: row;
+			align-items: stretch;
+			transition: background 0.3s ease;
+
+			@media (max-width: 768px) {
+				flex-direction: column;
+			}
+		}
+
+		&__img {
+			flex: 1;
+			background: var(--color-dark);
+			@include m.flex(row, center, center);
+			overflow: hidden;
+			border-radius: 9px 0 0 9px;
+
+			@media (max-width: 768px) {
+				flex: none;
+				height: 200px;
+				border-radius: 9px 9px 0 0;
+			}
+
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+
+		&__body {
+			flex: 1;
+			padding: 30px;
+			@include m.flex(column, flex-start, stretch, 15px);
+			color: var(--color-light);
+
+			@media (max-width: 768px) {
+				padding: 20px;
+			}
+		}
+
+		&__date {
+			color: #ffffff80;
+			font-size: 1.125rem;
+		}
+
+		&__title {
+			font-weight: 600;
+			font-size: 2rem;
+		}
+
+		&__text {
+			line-height: 1.5;
+			font-size: 1.125rem;
+			color: #d4d4d4;
+
+			p {
+				margin-bottom: 5px;
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+
+	&__button {
+		margin: 0 auto;
+		padding: 12.5px 100px;
+	}
+}

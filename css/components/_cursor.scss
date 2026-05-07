@@ -1,0 +1,79 @@
+@use '../core/variables' as v;
+@use '../core/mixins' as m;
+
+@media (pointer: coarse) {
+	body,
+	a,
+	button,
+	input,
+	textarea {
+		cursor: auto !important;
+	}
+
+	.cursor-dot,
+	.cursor-ring {
+		display: none !important;
+	}
+}
+
+@media (pointer: fine) {
+	body,
+	a,
+	button,
+	input,
+	textarea,
+	.swiper-pagination-bullet,
+	.swiper,
+	.swiper-wrapper {
+		cursor: none !important;
+	}
+
+	.cursor-dot {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 6px;
+		height: 6px;
+		background-color: var(--color-light);
+		border-radius: 50%;
+		pointer-events: none;
+		z-index: 100000;
+		will-change: transform;
+		transition: opacity 0.3s ease;
+	}
+
+	.cursor-ring {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 36px;
+		height: 36px;
+		border: 1px solid rgba(255, 255, 255, 0.4);
+		border-radius: 50%;
+		pointer-events: none;
+		z-index: 99999;
+		will-change: transform;
+		transition:
+			width 0.3s ease,
+			height 0.3s ease,
+			background-color 0.3s ease,
+			border-color 0.3s ease,
+			opacity 0.3s ease;
+
+		&--hover {
+			width: 56px;
+			height: 56px;
+			background-color: rgba(255, 255, 255, 0.05);
+			border-color: rgba(255, 255, 255, 0.1);
+			backdrop-filter: blur(2px);
+		}
+
+		&--drag {
+			width: 24px;
+			height: 24px;
+			background-color: rgba(255, 255, 255, 0.6);
+			border-color: transparent;
+			backdrop-filter: none;
+		}
+	}
+}

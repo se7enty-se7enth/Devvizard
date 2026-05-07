@@ -1,0 +1,44 @@
+@use '../core/variables' as v;
+@use '../core/mixins' as m;
+
+.header {
+	margin-top: 30px;
+	position: sticky;
+	top: 20px;
+	z-index: 100;
+
+	&__container {
+		@include m.flex(row, space-between, center, 40px);
+		background: rgba(255, 255, 255, 0.05);
+		backdrop-filter: blur(16px);
+		-webkit-backdrop-filter: blur(16px);
+		border: 1px solid rgba(255, 255, 255, 0.08);
+		border-radius: 20px;
+		padding: 15px 30px;
+		pointer-events: all;
+	}
+
+	&__logo {
+		font-family: 'bebas';
+		font-size: 3.75rem;
+	}
+
+	&__nav-list {
+		@include m.flex(row, center, center, 15px);
+		padding-block: 15px;
+	}
+
+	&__nav-link {
+		font-size: 1.5rem;
+		font-weight: 600;
+		padding-inline: 25px;
+
+		&:hover {
+			color: var(--color-accent);
+		}
+	}
+
+	&__button {
+		padding: 10px 20px;
+	}
+}

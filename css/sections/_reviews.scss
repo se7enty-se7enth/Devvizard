@@ -1,0 +1,144 @@
+@use '../core/variables' as v;
+@use '../core/mixins' as m;
+
+.reviews {
+	padding-bottom: 80px;
+
+	.reviews__slider {
+		padding-bottom: 50px;
+	}
+
+	.reviews__pagination {
+		bottom: 0 !important;
+
+		.swiper-pagination-bullet {
+			position: relative;
+			width: 10px;
+			height: 10px;
+			margin: 0 7px !important;
+			background: hsla(0, 0%, 100%, 0.3);
+			opacity: 1;
+			transition: all 0.3s ease;
+
+			&::after {
+				content: '';
+				position: absolute;
+				top: -15px;
+				bottom: -15px;
+				left: -15px;
+				right: -15px;
+			}
+
+			&-active {
+				width: 25px;
+				border-radius: 8px;
+				background: #ffffff;
+			}
+
+			&:hover {
+				background: hsla(0, 0%, 100%, 0.7);
+			}
+		}
+	}
+
+	&__header {
+		margin-bottom: 50px;
+		@include m.flex(column, center, center, 15px);
+	}
+
+	&__title {
+		font-family: 'bebas', sans-serif;
+		font-size: 2.625rem;
+		font-weight: 600;
+		letter-spacing: 1px;
+	}
+
+	&__subtitle {
+		color: hsla(0, 0%, 100%, 0.6);
+		font-size: 1.125rem;
+	}
+
+	&__slider {
+		padding-bottom: 20px;
+	}
+}
+
+.review-card {
+	@include m.flex(column, flex-start, stretch);
+	background: hsla(0, 0%, 100%, 0.03);
+	border: 1px solid hsla(0, 0%, 100%, 0.08);
+	border-radius: 8px;
+	padding: 24px;
+	height: auto;
+	transition:
+		background 0.3s ease,
+		border-color 0.3s ease;
+
+	&:hover {
+		background: hsla(0, 0%, 100%, 0.05);
+		border-color: hsla(0, 0%, 100%, 0.15);
+	}
+
+	&__header {
+		@include m.flex(row, space-between, flex-start);
+		margin-bottom: 16px;
+		border-bottom: 1px solid hsla(0, 0%, 100%, 0.05);
+		padding-bottom: 16px;
+	}
+
+	&__info {
+		@include m.flex(column, flex-start, flex-start);
+		gap: 4px;
+	}
+
+	&__name {
+		font-weight: 600;
+		font-size: 1.125rem;
+		color: var(--color-light);
+	}
+
+	&__task {
+		font-size: 0.875rem;
+		color: hsla(0, 0%, 100%, 0.5);
+	}
+
+	&__rating {
+		color: #ffa600cc;
+		letter-spacing: 2px;
+		font-size: 1.1rem;
+	}
+
+	&__body {
+		flex-grow: 1;
+		margin-bottom: 24px;
+		font-size: 1rem;
+		line-height: 1.6;
+		color: hsla(0, 0%, 100%, 0.8);
+		font-style: italic;
+	}
+
+	&__verify {
+		@include m.flex(row, flex-start, center);
+		gap: 8px;
+		width: max-content;
+		padding: 8px 12px;
+		background: hsla(0, 0%, 100%, 0.05);
+		border-radius: 8px;
+		color: hsla(0, 0%, 100%, 0.7);
+		font-size: 0.875rem;
+		text-decoration: none;
+		transition:
+			color 0.2s ease,
+			background 0.2s ease;
+
+		&:hover {
+			color: #ffffff;
+			background: hsla(0, 0%, 100%, 0.1);
+		}
+
+		&-icon {
+			color: #4caf50;
+			font-weight: bold;
+		}
+	}
+}

@@ -1,0 +1,44 @@
+@use '../core/variables' as v;
+
+@mixin flex($direction: row, $justify: center, $align: center, $gap: 0) {
+	display: flex;
+	flex-direction: $direction;
+	justify-content: $justify;
+	align-items: $align;
+	gap: $gap;
+}
+
+@mixin grid($grid-template-columns: repeat(4, 1fr), $gap: 0) {
+	display: grid;
+	grid-template-columns: $grid-template-columns;
+	gap: $gap;
+}
+
+@mixin hover {
+	@media (hover: hover) {
+		&:hover {
+			@content;
+		}
+	}
+
+	@media (hover: none) {
+		&:active {
+			@content;
+		}
+	}
+}
+
+@mixin down($point) {
+	$breakpoints: (
+		sm: 576px,
+		md: 768px,
+		lg: 1024px,
+		xl: 1280px,
+		xxl: 1440px,
+	);
+	$value: if(map-has-key($breakpoints, $point), map-get($breakpoints, $point), $point);
+
+	@media (max-width: $value) {
+		@content;
+	}
+}

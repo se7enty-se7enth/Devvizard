@@ -1,0 +1,195 @@
+@use '../core/variables' as v;
+@use '../core/mixins' as m;
+
+.faq {
+	padding: 100px 0 220px;
+
+	&__header {
+		margin-bottom: 50px;
+		@include m.flex(column, center, center, 15px);
+	}
+
+	&__title {
+		font-family: 'bebas', sans-serif;
+		font-size: 2.625rem;
+		font-weight: 600;
+		letter-spacing: 1px;
+	}
+
+	&__subtitle {
+		font-size: 1.375rem;
+		color: hsla(0, 0%, 100%, 0.5);
+	}
+
+	&__list {
+		max-width: 860px;
+		@include m.flex(column, center, stretch, 15px);
+		margin: 0 auto;
+	}
+
+	.faq__card {
+		position: relative;
+		padding: 1px;
+		border-radius: 8px;
+		background: rgba(255, 255, 255, 0.08);
+		overflow: hidden;
+
+		transition: transform 0.3s ease;
+		will-change: transform;
+
+		&:hover,
+		&:focus-within {
+			transform: scale(1.01);
+			z-index: 10;
+		}
+
+		&:hover .faq__glow,
+		&:focus-within .faq__glow {
+			opacity: 1;
+		}
+	}
+
+	&__glow {
+		position: absolute;
+		inset: 0;
+		z-index: 1;
+		opacity: 0;
+		transition: opacity 0.5s ease;
+		pointer-events: none;
+
+		background: radial-gradient(
+			500px circle at var(--mouse-x) var(--mouse-y),
+			rgba(255, 255, 255, 0.4),
+			transparent 40%
+		);
+	}
+
+	&__item {
+		position: relative;
+		z-index: 2;
+		background-color: #0d0d0d;
+		border-radius: 7px;
+		transition: background 0.3s ease;
+	}
+
+	.faq__card:hover .faq__item,
+	.faq__card:focus-within .faq__item {
+		background-color: #121212;
+	}
+
+	&__item.is-active {
+		background-color: #1a1a1a;
+
+		.faq__icon {
+			transform: rotate(45deg);
+
+			&::before,
+			&::after {
+				background: var(--color-light);
+			}
+		}
+
+		.faq__answer {
+			grid-template-rows: 1fr;
+			padding-bottom: 25px;
+		}
+	}
+
+	&__question {
+		width: 100%;
+		@include m.flex(row, space-between, center);
+		padding: 25px;
+		background: none;
+		border: none;
+		color: var(--color-light);
+		font-size: 1.375rem;
+		font-weight: 500;
+		cursor: pointer;
+		font-family: var(--main-font);
+		outline: none;
+
+		@media (max-width: 768px) {
+			font-size: 1.125rem;
+			padding: 20px;
+		}
+	}
+
+	&__icon {
+		position: relative;
+		width: 24px;
+		height: 24px;
+		flex-shrink: 0;
+		margin-left: 20px;
+		transition: all 0.3s ease;
+
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
+			background: rgba(255, 255, 255, 0.4);
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			transition: background 0.3s ease;
+			border-radius: 2px;
+		}
+
+		&::before {
+			width: 100%;
+			height: 2px;
+		}
+
+		&::after {
+			width: 2px;
+			height: 100%;
+		}
+	}
+
+	&__answer {
+		display: grid;
+		grid-template-rows: 0fr;
+		transition:
+			grid-template-rows 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+			padding 0.4s ease;
+		padding: 0 25px;
+
+		@media (max-width: 768px) {
+			padding: 0 20px;
+		}
+	}
+
+	&__answer-inner {
+		overflow: hidden;
+
+		p {
+			color: rgba(255, 255, 255, 0.6);
+			line-height: 1.6;
+			font-size: 1.125rem;
+			margin-bottom: 12px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			@media (max-width: 768px) {
+				font-size: 1rem;
+			}
+
+			strong {
+				color: var(--color-light);
+				font-weight: 500;
+			}
+		}
+
+		code {
+			display: inline-block;
+			font-family: 'Courier New', monospace;
+			font-size: 0.875rem;
+			color: rgba(255, 255, 255, 0.3);
+			margin-top: 15px;
+			padding-top: 15px;
+			border-top: 1px solid rgba(255, 255, 255, 0.05);
+			width: 100%;
+		}
+	}
+}

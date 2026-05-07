@@ -1,0 +1,22 @@
+@use 'core/normalize';
+@use 'core/fonts';
+@use 'core/variables' as v;
+@use 'core/mixins' as m;
+@use 'core/global';
+@use 'core/utils';
+
+@use 'components/buttons';
+@use 'components/modal';
+@use 'components/cursor';
+
+@use 'sections/header';
+@use 'sections/hero';
+@use 'sections/services';
+@use 'sections/portfolio';
+@use 'sections/faq';
+@use 'sections/reviews';
+@use 'sections/footer';
+
+// 4. СТРАНИЦЫ
+// @use 'pages/privacy';
+// @use 'pages/projects';

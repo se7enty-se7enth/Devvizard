@@ -1,0 +1,1033 @@
+<!doctype html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Devvizard - Разработка сайтов любой сложности | команда разработчиков</title>
+		<meta
+			name="description"
+			content="Качественная фронтенд-разработка от команды Devvizard. Верстка макетов любой сложности, внимание к деталям, адаптивность и предсказуемый результат точно в срок."
+		/>
+		<meta
+			name="keywords"
+			content="разработка сайтов, фронтенд разработка, создание лендингов, сайты под ключ, верстка сайтов, html scss js, верстка по бэм, веб-анимация, услуги фронтенда, devvizard"
+		/>
+		<meta name="author" content="Ilya Romanovich" />
+		<meta name="robots" content="index, follow" />
+		<meta name="theme-color" content="#000 " />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="Devvizard | веб-разработка любой сложности" />
+		<meta
+			property="og:description"
+			content="Devvizard — магия чистого кода. Разработка сайтов/лендингов под ключ, адаптивная и быстрая верстка"
+		/>
+		<meta property="og:url" content="https://devvizard.ru/" />
+		<meta property="og:image" content="https://devvizard.ru/img/og-image.jpg" />
+		<meta property="og:site_name" content="Devvizard" />
+		<meta property="og:locale" content="ru_RU" />
+		<link
+			rel="preload"
+			href="./fonts/BebasNeue-Regular.woff2"
+			as="font"
+			type="font/woff2"
+			crossorigin
+		/>
+		<link rel="icon" type="image/svg+xml" href="./" />
+		<link rel="icon" type="image/png" href="./" />
+		<link rel="apple-touch-icon" href="./" />
+		<link rel="stylesheet" href="./css/swiper-bundle.min.css" />
+		<link rel="stylesheet" href="./css/main.css" />
+	</head>
+	<body class="index">
+		<noscript>
+			<p>
+				Ваш браузер не поддерживает JavaScript, почти все элементы и функции сайта, буду
+				работать некорректно или не будут работать вообще, настоятельно рекумендуем поменять
+				бразуер или включить JavaScript
+			</p>
+		</noscript>
+		<div class="noise-overlay"></div>
+		<div class="cursor-dot" id="cursor-dot"></div>
+		<div class="cursor-ring" id="cursor-ring"></div>
+		<header class="header">
+			<div class="container header__container">
+				<a href="#" class="header__logo logo">
+					<span>Devvizard</span>
+				</a>
+				<nav class="header__nav">
+					<ul class="header__nav-list">
+						<li class="header__nav-item">
+							<a href="#services" class="header__nav-link">Услуги</a>
+						</li>
+						<li class="header__nav-item">
+							<a href="/" class="header__nav-link">Проекты</a>
+						</li>
+						<li class="header__nav-item">
+							<a href="#faq" class="header__nav-link">Вопросы</a>
+						</li>
+						<li class="header__nav-item">
+							<a href="#reviews" class="header__nav-link">Отзывы</a>
+						</li>
+						<li class="header__nav-item">
+							<a href="#contacts" class="header__nav-link">Контакты</a>
+						</li>
+					</ul>
+				</nav>
+				<button type="button" class="header__button button js-glow-card">
+					Обсудить проект
+				</button>
+			</div>
+		</header>
+		<main class="main">
+			<section class="hero">
+				<div class="container hero__container">
+					<div class="hero__content js-fade-up">
+						<div class="hero__title">
+							<h1>
+								Создаем <br />
+								<span class="xray-word" id="xray-word">
+									<span class="xray-word__base">продукты</span>
+									<span class="xray-word__code" aria-hidden="true">
+										<span class="token-tag">&lt;div&nbsp;</span
+										><span class="token-attr">class</span>=<span
+											class="token-string"
+											>"quality"</span
+										><span class="token-tag">&gt;</span>
+									</span>
+								</span>
+							</h1>
+						</div>
+						<p class="hero__subtitle">
+							Студия веб-разработки Devvizard. Создаем сайты разных сложностей,
+							внедряя лучшие фронтенд-решения на базе чистого кода.
+						</p>
+						<p class="hero__subtitle">
+							Формируем визуальную логику интерфейсов и проектируем пользовательский
+							опыт, где функциональность стоит на первом месте.
+						</p>
+					</div>
+					<div class="hero__visual js-fade-up" id="parallax-scene" data-delay="0.2">
+						<div class="hero__glow"></div>
+						<div class="glass-card glass-card--back" data-speed="0.03">
+							<div class="glass-card__content">
+								<span
+									style="
+										font-family: 'Courier New', monospace;
+										font-size: 32px;
+										font-weight: bold;
+										opacity: 0.4;
+										text-shadow: 0 0 15px rgba(255, 255, 255, 1);
+									"
+									>&lt;/&gt;</span
+								>
+							</div>
+						</div>
+
+						<div class="glass-card glass-card--front" data-speed="0.07">
+							<div class="glass-card__content">
+								<p
+									style="
+										color: #c586c0;
+										font-family: 'Courier New', monospace;
+										font-size: 0.85rem;
+										margin-bottom: 8px;
+									"
+								>
+									git commit -m "super_mega_final_version10"
+								</p>
+
+								<p style="font-size: 1rem; font-weight: bold; margin-bottom: 6px">
+									// Задача:
+								</p>
+
+								<p
+									style="
+										color: rgba(255, 255, 255, 0.7);
+										font-size: 0.95rem;
+										line-height: 1.4;
+									"
+								>
+									"Поиграть со шрифтами" и "сделать логотип чуть побольше". <br />
+									<span style="color: #4caf50">Успешно выполнено.</span>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="hero__marquee marquee js-fade-up">
+					<div class="marquee__inner">
+						<ul class="marquee__list" aria-hidden="true">
+							<li>HTML5</li>
+							<li>SCSS</li>
+							<li>JavaScript</li>
+							<li>Tailwind CSS</li>
+							<li>BEM</li>
+							<li>Git</li>
+							<li>Figma</li>
+							<li>React</li>
+							<li>Next.js</li>
+							<li>Vite</li>
+						</ul>
+						<ul class="marquee__list" aria-hidden="true">
+							<li>HTML5</li>
+							<li>SCSS</li>
+							<li>JavaScript</li>
+							<li>Tailwind CSS</li>
+							<li>BEM</li>
+							<li>Git</li>
+							<li>Figma</li>
+							<li>React</li>
+							<li>Next.js</li>
+							<li>Vite</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+
+			<section class="services js-fade-up" id="services">
+				<div class="container services__container">
+					<div class="services__title">
+						<h2>Наши услуги</h2>
+					</div>
+					<div class="services__bento">
+						<div class="service-card service-card--main js-glow-card js-fade-up">
+							<div class="service-card__glow"></div>
+							<div class="service-card__content">
+								<span class="service-card__tag">Solutions</span>
+								<div class="service-card__title">
+									<h3>Разработка сайтов</h3>
+								</div>
+								<div class="service-card__text">
+									<p>
+										Проектируем современные веб-интерфейсы под задачи вашего
+										бизнеса. От продуманной структуры до сложной интерактивной
+										логики — создаем продукты, которыми удобно и приятно
+										пользоваться.
+									</p>
+								</div>
+								<div class="service-card__footer">
+									<code>UI/UX Logic // Frontend // Reliability</code>
+								</div>
+							</div>
+						</div>
+
+						<div
+							class="service-card service-card--style js-glow-card js-fade-up"
+							data-delay="0.1"
+						>
+							<div class="service-card__glow"></div>
+							<div class="service-card__content">
+								<span class="service-card__tag">Performance</span>
+								<div class="service-card__title">
+									<h3>Чистая верстка и SEO-стандарты</h3>
+								</div>
+								<div class="service-card__text">
+									<p>
+										Никакого мусора и костылей. Только актуальные стандарты
+										разработки, оптимизация ассетов и чистый код, который
+										одинаково сильно любят пользователи и поисковые роботы.
+									</p>
+								</div>
+								<div class="service-card__footer">
+									<code>Tailwind // BEM // Core Web Vitals</code>
+								</div>
+							</div>
+						</div>
+
+						<div
+							class="service-card service-card--tools js-glow-card js-fade-up"
+							data-delay="0.2"
+						>
+							<div class="service-card__glow"></div>
+							<div class="service-card__content">
+								<div class="service-card__title">
+									<h3>Поддержка и доработка</h3>
+								</div>
+								<div class="service-card__text">
+									<p>
+										Берем в работу текущие проекты: исправляем «поехавшую»
+										верстку, чиним баги в интерфейсе и адаптируем под мобильные
+										устройства. Приводим чужой фронтенд в порядок.
+									</p>
+								</div>
+								<div class="service-card__footer">
+									<code>Bugfix // Refactoring // Responsive</code>
+								</div>
+							</div>
+						</div>
+
+						<div
+							class="service-card service-card--git js-glow-card js-fade-up"
+							data-delay="0.3"
+						>
+							<div class="service-card__glow"></div>
+							<div class="service-card__content">
+								<div class="service-card__title">
+									<h3>Сопровождение</h3>
+								</div>
+								<div class="service-card__text">
+									<p>
+										Остаемся на связи после релиза. Берем на себя техническую
+										поддержку, регулярное внесение правок и контроль
+										стабильности проекта.
+									</p>
+								</div>
+								<div class="service-card__footer">
+									<code>Support // Maintenance</code>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="portfolio js-fade-up">
+				<div class="container portfolio__container">
+					<div class="portfolio__header">
+						<div class="portfolio__title">
+							<h2>Наши кейсы</h2>
+						</div>
+						<div class="portfolio__subtitle">
+							<p>Последние работы</p>
+						</div>
+					</div>
+					<ul class="portfolio__list">
+						<li class="portfolio__item js-fade-up">
+							<article class="portfolio-card js-glow-card">
+								<a
+									href="/"
+									class="portfolio-card__link"
+									aria-label="Посмотреть проект Grand-decor"
+								></a>
+
+								<div class="portfolio-card__glow"></div>
+
+								<div class="portfolio-card__content">
+									<div class="portfolio-card__img">
+										<img
+											src="./img/grand-decor.webp"
+											alt="Проект: Grand-decor"
+											loading="lazy"
+											decoding="async"
+										/>
+									</div>
+									<div class="portfolio-card__body">
+										<time class="portfolio-card__date">2026</time>
+										<div class="portfolio-card__title">
+											<h3>Grand-decor</h3>
+										</div>
+										<div class="portfolio-card__text">
+											<p>
+												Разработка объемного сайта-каталога для московского
+												производителя гипсовой лепнины.
+											</p>
+											<p>
+												Сверстано более 15 категорий товаров и внутренних
+												страниц. Основной упор сделан на понятную навигацию
+												по большому ассортименту, корректное отображение на
+												мобильных устройствах и настройку форм для быстрой
+												связи с отделом продаж.
+											</p>
+										</div>
+									</div>
+								</div>
+							</article>
+						</li>
+
+						<li class="portfolio__item js-fade-up">
+							<article class="portfolio-card js-glow-card">
+								<a
+									href="/"
+									class="portfolio-card__link"
+									aria-label="Посмотреть проект City Center"
+								></a>
+
+								<div class="portfolio-card__glow"></div>
+
+								<div class="portfolio-card__content">
+									<div class="portfolio-card__img">
+										<img
+											src="./img/city-center.webp"
+											alt="Проект: City Center"
+											loading="lazy"
+											decoding="async"
+										/>
+									</div>
+									<div class="portfolio-card__body">
+										<time class="portfolio-card__date">2026</time>
+										<div class="portfolio-card__title">
+											<h3>City Center</h3>
+										</div>
+										<div class="portfolio-card__text">
+											<p>
+												Фронтенд корпоративного сайта для крупного
+												B2B-генподрядчика (коммерческая недвижимость,
+												объекты в Москва-Сити).
+											</p>
+											<p>
+												Сверстан сложный интерфейс с акцентом на премиальную
+												подачу услуг и портфолио. Внедрены продвинутые
+												анимации на GSAP и ScrollTrigger — сайт плавно
+												реагирует на скролл, а интерактивные элементы и
+												нестандартные слайдеры работают без рывков на любых
+												устройствах.
+											</p>
+										</div>
+									</div>
+								</div>
+							</article>
+						</li>
+
+						<li class="portfolio__item js-fade-up">
+							<article class="portfolio-card js-glow-card">
+								<a
+									href="/"
+									class="portfolio-card__link"
+									aria-label="Посмотреть проект Сбрендели"
+								></a>
+
+								<div class="portfolio-card__glow"></div>
+
+								<div class="portfolio-card__content">
+									<div class="portfolio-card__img">
+										<img
+											src="./img/sbranDili.webp"
+											alt="Проект: Sbrandili"
+											loading="lazy"
+											decoding="async"
+										/>
+									</div>
+									<div class="portfolio-card__body">
+										<time class="portfolio-card__date">2026</time>
+										<div class="portfolio-card__title">
+											<h3>Сбрендели</h3>
+										</div>
+										<div class="portfolio-card__text">
+											<p>
+												Фронтенд-разработка внутренних страниц для сайта
+												авторской дизайн-студии и брендингового агентства.
+											</p>
+											<p>
+												Сверстана основная часть структуры: страницы услуг,
+												детальные кейсы и объемное портфолио (видеоролики,
+												иллюстрации, брендинг). Так как заказчик —
+												профессиональная дизайн-команда, особый упор делался
+												на Pixel Perfect верстку и точную передачу
+												креативных макетов в код.
+											</p>
+										</div>
+									</div>
+								</div>
+							</article>
+						</li>
+					</ul>
+					<a href="/" class="portfolio__button button js-glow-card js-fade-up"
+						>Все проекты</a
+					>
+				</div>
+			</section>
+
+			<section class="faq js-fade-up" id="faq">
+				<div class="container faq__container">
+					<div class="faq__header">
+						<div class="faq__title">
+							<h2>Частые вопросы</h2>
+						</div>
+						<div class="faq__subtitle">
+							<p>Всё, что нужно знать перед стартом проекта</p>
+						</div>
+					</div>
+					<div class="faq__list js-fade-up">
+						<div class="faq__card js-glow-card">
+							<div class="faq__glow"></div>
+							<div class="faq__item js-faq-item">
+								<button class="faq__question" type="button">
+									<span>Как формируется цена на разработку?</span>
+									<span class="faq__icon"></span>
+								</button>
+								<div class="faq__answer">
+									<div class="faq__answer-inner">
+										<p>
+											Всё зависит от функционала, дизайна и количества
+											анимаций. Небольшой, но аккуратный одностраничный
+											лендинг без сложной логики и тяжелых анимаций может
+											обойтись всего в 5 000 – 7 000 ₽ (без посадки на CMS).
+											Более крупные многостраничные проекты и веб-приложения
+											оцениваем индивидуально. Точную стоимость назовем после
+											того, как посмотрим макет или обсудим задачу.
+										</p>
+										<code>Status: Прозрачное ценообразование</code>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="faq__card js-glow-card">
+							<div class="faq__glow"></div>
+							<div class="faq__item js-faq-item">
+								<button class="faq__question" type="button">
+									<span>Как происходит оплата? Вы работаете официально?</span>
+									<span class="faq__icon"></span>
+								</button>
+								<div class="faq__answer">
+									<div class="faq__answer-inner">
+										<p>
+											Да, мы работаем полностью официально по статусу
+											самозанятости. Оплата происходит с выдачей электронных
+											чеков (работаем по НПД). Для компаний и ИП мы составляем
+											договор и принимаем оплату по реквизитам. Для частных
+											лиц доступен быстрый и удобный перевод на карту (СБП).
+											Оплата разбивается на два этапа: 50% предоплата перед
+											стартом и 50% после успешной сдачи проекта.
+										</p>
+										<code>Docs: Договор // Чеки НПД</code>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="faq__card js-glow-card">
+							<div class="faq__glow"></div>
+							<div class="faq__item js-faq-item">
+								<button class="faq__question" type="button">
+									<span
+										>Какие реальные сроки разработки и как вносятся
+										правки?</span
+									>
+									<span class="faq__icon"></span>
+								</button>
+								<div class="faq__answer">
+									<div class="faq__answer-inner">
+										<p>
+											Адаптивная верстка небольшого лендинга занимает 3-5
+											дней, многостраничника — от 2-3 недель. Дедлайны строго
+											фиксируем в договоре.
+										</p>
+										<p>
+											Также помните, что сроки работы напрямую зависят от
+											сложности анимаций, объема работ, функциональности и
+											общего стека.
+										</p>
+										<p>
+											Мы работаем итерациями: мелкие корректировки (цвета,
+											шрифты, отступы) на этапе разработки вносим бесплатно.
+											Крупные изменения логики или дизайна, которые
+											противоречат изначальному ТЗ, оцениваются отдельно.
+										</p>
+										<code
+											>Process: ETA 3-14+ дней // Итеративная разработка</code
+										>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="faq__card js-glow-card">
+							<div class="faq__glow"></div>
+							<div class="faq__item js-faq-item">
+								<button class="faq__question" type="button">
+									<span>А что если нет макета? Что нужно для старта работы?</span>
+									<span class="faq__icon"></span>
+								</button>
+								<div class="faq__answer">
+									<div class="faq__answer-inner">
+										<p>
+											Всё зависит от того, на каком этапе находится ваш
+											проект. Отсутствие макета — совершенно не проблема. У
+											нас есть три пути:
+										</p>
+										<p>
+											<strong>1. У вас есть готовый дизайн.</strong> Просто
+											пришлите нам ссылку на макет (Figma) и техническое
+											задание (если на сайте планируется нестандартная логика
+											или сложные анимации).
+										</p>
+										<p>
+											<strong>2. Проект «под ключ».</strong> К работе
+											подключается наш UI/UX-дизайнер. Вы получаете полностью
+											уникальный интерфейс. От вас потребуется заполнить бриф,
+											предоставить тексты для страниц и качественные
+											фото/видео вашей продукции.
+										</p>
+										<p>
+											<strong>3. Работа по референсам.</strong> Вы показываете
+											сайты конкурентов, и мы собираем проект на их основе.
+											Нужно быть реалистами: такой сайт состоит из стандартных
+											паттернов и не будет на 100% уникальным. Для старта
+											нужны ссылки на 2-3 сайта, которые вам нравятся, и
+											готовые тексты.
+										</p>
+										<p>
+											<em>А что делать с логотипом?</em> Если у вас есть
+											логотип в векторе и фирменные цвета — отлично. Если нет,
+											то в рамках базовой разработки мы бесплатно сделаем
+											аккуратный текстовый логотип в стилистике сайта.
+										</p>
+										<code>Onboarding: Figma // UI/UX Design // Референсы</code>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="faq__card js-glow-card">
+							<div class="faq__glow"></div>
+							<div class="faq__item js-faq-item">
+								<button class="faq__question" type="button">
+									<span>Что НЕ входит в базовую стоимость разработки?</span>
+									<span class="faq__icon"></span>
+								</button>
+								<div class="faq__answer">
+									<div class="faq__answer-inner">
+										<p>
+											Мы фокусируемся на качественном коде и визуале, поэтому
+											в базовую стоимость не входят услуги смежных
+											специалистов. Мы не занимаемся:
+										</p>
+										<p>
+											— Написанием текстов (копирайтингом);<br />— Настройкой
+											рекламы и SEO-продвижением;<br />— Монтажом
+											видеороликов;<br />— Подключением сложных платежных
+											шлюзов (если сайт без CMS).
+										</p>
+										<code>Scope: Strict Frontend // Без скрытых задач</code>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="faq__card js-glow-card">
+							<div class="faq__glow"></div>
+							<div class="faq__item js-faq-item">
+								<button class="faq__question" type="button">
+									<span
+										>Вы поможете с запуском в интернет? Есть ли гарантия?</span
+									>
+									<span class="faq__icon"></span>
+								</button>
+								<div class="faq__answer">
+									<div class="faq__answer-inner">
+										<p>
+											Да, если у вас нет домена и хостинга, мы поможем их
+											выбрать и зарегистрировать (строго на ваши данные).
+											Перенос готового проекта на ваш сервер уже включен в
+											работу.
+										</p>
+										<p>
+											После запуска мы предоставляем 30 дней бесплатной
+											технической поддержки. Если в нашей верстке обнаружится
+											баг — мы оперативно и бесплатно всё исправим.
+										</p>
+										<code
+											>Deploy & Support: Настройка сервера // 30 дней
+											гарантии</code
+										>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="faq__card js-glow-card">
+							<div class="faq__glow"></div>
+							<div class="faq__item js-faq-item">
+								<button class="faq__question" type="button">
+									<span>Смогу ли я сам редактировать контент после сдачи?</span>
+									<span class="faq__icon"></span>
+								</button>
+								<div class="faq__answer">
+									<div class="faq__answer-inner">
+										<p>
+											По умолчанию мы разрабатываем быстрые статические сайты
+											без тяжелых систем управления. Это идеальное решение для
+											лендингов и промо-страниц: такой сайт работает
+											молниеносно, его невозможно взломать, и разработка
+											обходится дешевле. Если вам нужно регулярно публиковать
+											статьи или самостоятельно обновлять каталог БЕЗ помощи
+											специалиста, мы можем интегрировать сайт с CMS (системой
+											управления контентом). Эта услуга обговаривается
+											индивидуально и оплачивается дополнительно.
+										</p>
+										<code>Architecture: Быстрая статика // CMS по запросу</code>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="reviews js-fade-up" id="reviews">
+				<div class="container reviews__container">
+					<div class="reviews__header">
+						<div class="reviews__title">
+							<h2>Отзывы клиентов</h2>
+						</div>
+						<div class="reviews__subtitle">
+							<p>Что говорят те, кто уже доверил нам свой проект</p>
+						</div>
+					</div>
+
+					<div class="swiper reviews__slider js-reviews-slider">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide review-card">
+								<div class="review-card__header">
+									<div class="review-card__info">
+										<span class="review-card__name">Meylis A.</span>
+										<span class="review-card__task"
+											>Обучение фронтенд разработке</span
+										>
+									</div>
+									<div class="review-card__rating">★★★★★</div>
+								</div>
+
+								<div class="review-card__body">
+									<p>
+										«В данный момент прохожу обучение у этого специалиста, очень
+										грамотно и четко все объясняет, за несколько уроков выучил
+										программу первого семестра университета Sunway (Malaysia).»
+									</p>
+								</div>
+
+								<div class="review-card__footer">
+									<a
+										href="https://profi.ru/profile/PenkovIR/#reviews-tab"
+										target="_blank"
+										rel="noopener noreferrer"
+										class="review-card__verify"
+									>
+										<span class="review-card__verify-icon">✓</span>
+										<span>Проверено на Profi.ru</span>
+									</a>
+								</div>
+							</div>
+
+							<div class="swiper-slide review-card">
+								<div class="review-card__header">
+									<div class="review-card__info">
+										<span class="review-card__name">Варвара</span>
+										<span class="review-card__task">Верстка сайта</span>
+									</div>
+									<div class="review-card__rating">★★★★★</div>
+								</div>
+
+								<div class="review-card__body">
+									<p>
+										«Все прошло отлично, с задачей управились даже раньше
+										дедлайна. На протяжении всего времени демонстрировали
+										результаты и рассказывали о процессе работы. Обязательно
+										буду обращаться»
+									</p>
+								</div>
+
+								<div class="review-card__footer">
+									<a
+										href="https://profi.ru/profile/PenkovIR/#reviews-tab"
+										target="_blank"
+										rel="noopener noreferrer"
+										class="review-card__verify"
+									>
+										<span class="review-card__verify-icon">✓</span>
+										<span>Проверено на Profi.ru</span>
+									</a>
+								</div>
+							</div>
+							<div class="swiper-slide review-card">
+								<div class="review-card__header">
+									<div class="review-card__info">
+										<span class="review-card__name">Анатолий</span>
+										<span class="review-card__task">Верстка сайта</span>
+									</div>
+									<div class="review-card__rating">★★★★★</div>
+								</div>
+
+								<div class="review-card__body">
+									<p>
+										«Илья очень быстро приступил к работе и также быстро всё
+										сделал. Весьма квалифицированный специалист. Говорю так
+										поскольку имею некоторый опыт работы в этой сфере.
+										Рекомендую обращаться к Илье, хороший специалист. Оценка -
+										отлично»
+									</p>
+								</div>
+
+								<div class="review-card__footer">
+									<a
+										href="https://profi.ru/profile/PenkovIR/#reviews-tab"
+										target="_blank"
+										rel="noopener noreferrer"
+										class="review-card__verify"
+									>
+										<span class="review-card__verify-icon">✓</span>
+										<span>Проверено на Profi.ru</span>
+									</a>
+								</div>
+							</div>
+							<div class="swiper-slide review-card">
+								<div class="review-card__header">
+									<div class="review-card__info">
+										<span class="review-card__name">Артём</span>
+										<span class="review-card__task">Верстка сайта</span>
+									</div>
+									<div class="review-card__rating">★★★★★</div>
+								</div>
+
+								<div class="review-card__body">
+									<p>«Очень хорошо, сделал все очень быстро!»</p>
+								</div>
+
+								<div class="review-card__footer">
+									<a
+										href="https://profi.ru/profile/PenkovIR/#reviews-tab"
+										target="_blank"
+										rel="noopener noreferrer"
+										class="review-card__verify"
+									>
+										<span class="review-card__verify-icon">✓</span>
+										<span>Проверено на Profi.ru</span>
+									</a>
+								</div>
+							</div>
+
+							<div class="swiper-slide review-card">
+								<div class="review-card__header">
+									<div class="review-card__info">
+										<span class="review-card__name">Дмитрий</span>
+										<span class="review-card__task">Верстка сайта</span>
+									</div>
+									<div class="review-card__rating">★★★★★</div>
+								</div>
+
+								<div class="review-card__body">
+									<p>
+										«Работа выполнена качественно и быстро. Цена приемлемая,
+										советую этого специалиста»
+									</p>
+								</div>
+
+								<div class="review-card__footer">
+									<a
+										href="https://profi.ru/profile/PenkovIR/#reviews-tab"
+										target="_blank"
+										rel="noopener noreferrer"
+										class="review-card__verify"
+									>
+										<span class="review-card__verify-icon">✓</span>
+										<span>Проверено на Profi.ru</span>
+									</a>
+								</div>
+							</div>
+
+							<div class="swiper-slide review-card">
+								<div class="review-card__header">
+									<div class="review-card__info">
+										<span class="review-card__name">София</span>
+										<span class="review-card__task">Верстка сайта</span>
+									</div>
+									<div class="review-card__rating">★★★★★</div>
+								</div>
+
+								<div class="review-card__body">
+									<p>
+										«Все понравилось, было быстро и качественно, а самое главное
+										приятная цена за такой труд.»
+									</p>
+								</div>
+
+								<div class="review-card__footer">
+									<a
+										href="https://profi.ru/profile/PenkovIR/#reviews-tab"
+										target="_blank"
+										rel="noopener noreferrer"
+										class="review-card__verify"
+									>
+										<span class="review-card__verify-icon">✓</span>
+										<span>Проверено на Profi.ru</span>
+									</a>
+								</div>
+							</div>
+
+							<div class="swiper-slide review-card">
+								<div class="review-card__header">
+									<div class="review-card__info">
+										<span class="review-card__name">VEIDBA Studio</span>
+										<span class="review-card__task"
+											>Верстка сайта лендинга</span
+										>
+									</div>
+									<div class="review-card__rating">★★★★★</div>
+								</div>
+
+								<div class="review-card__body">
+									<p>
+										«Быстро написал адаптированный код для сайта. Все работает.
+										Цена за услугу была приятная.»
+									</p>
+								</div>
+
+								<div class="review-card__footer">
+									<a
+										href="https://profi.ru/profile/PenkovIR/#reviews-tab"
+										target="_blank"
+										rel="noopener noreferrer"
+										class="review-card__verify"
+									>
+										<span class="review-card__verify-icon">✓</span>
+										<span>Проверено на Profi.ru</span>
+									</a>
+								</div>
+							</div>
+
+							<div class="swiper-slide review-card">
+								<div class="review-card__header">
+									<div class="review-card__info">
+										<span class="review-card__name">Михаил</span>
+										<span class="review-card__task"
+											>Создание сайта-визитки</span
+										>
+									</div>
+									<div class="review-card__rating">★★★★★</div>
+								</div>
+
+								<div class="review-card__body">
+									<p>
+										«Прекрасный специалист и мастер своего дела, другие
+										накручивали цены (я знаю рыночные цены) и данный специалист
+										сделал всё по рынку, быстро, качественно и в срок, в общем
+										будут задач, только к нему =)»
+									</p>
+								</div>
+
+								<div class="review-card__footer">
+									<a
+										href="https://profi.ru/profile/PenkovIR/#reviews-tab"
+										target="_blank"
+										rel="noopener noreferrer"
+										class="review-card__verify"
+									>
+										<span class="review-card__verify-icon">✓</span>
+										<span>Проверено на Profi.ru</span>
+									</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="swiper-pagination reviews__pagination"></div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer class="footer js-fade-up" id="contacts">
+			<div class="container footer__container">
+				<div class="footer__main">
+					<div class="footer__cta">
+						<h2 class="footer__title">Давайте создадим<br />что-то крутое.</h2>
+						<p class="footer__subtitle">
+							Открыты для новых проектов. Напишите нам, и мы обсудим вашу задачу.
+						</p>
+					</div>
+
+					<div class="footer__contacts">
+						<a
+							href="https://t.me/devvizard"
+							target="_blank"
+							rel="noopener noreferrer"
+							class="footer__contact-card"
+						>
+							<span class="footer__contact-label">Быстрая связь</span>
+							<span class="footer__contact-value">Telegram ↗</span>
+						</a>
+
+						<a href="mailto:contact@devvizard.ru" class="footer__contact-card">
+							<span class="footer__contact-label">Долгая связь</span>
+							<span class="footer__contact-value">contact@devvizard.ru ↗</span>
+						</a>
+					</div>
+				</div>
+
+				<div class="footer__bottom">
+					<div class="footer__logo logo">
+						<span>Devvizard</span>
+					</div>
+
+					<div class="footer__copy">
+						<span>© 2026 Devvizard. Все права защищены.</span>
+					</div>
+
+					<div class="footer__legal">
+						<a href="#">Политика конфиденциальности</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<div class="modal" id="contact-modal" role="dialog" aria-modal="true">
+			<div class="modal__overlay" id="modal-overlay"></div>
+			<div class="modal__content">
+				<button
+					type="button"
+					class="modal__close"
+					id="modal-close"
+					aria-label="Закрыть окно"
+				>
+					<svg
+						width="24"
+						height="24"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="2"
+					>
+						<line x1="18" y1="6" x2="6" y2="18"></line>
+						<line x1="6" y1="6" x2="18" y2="18"></line>
+					</svg>
+				</button>
+				<div class="modal__title">
+					<h2>Прямая связь</h2>
+				</div>
+				<p class="modal__subtitle">
+					Выберите удобный мессенджер или напишите нам на почту. Отвечаем быстро.
+				</p>
+				<div class="modal__links">
+					<a href="mailto:contact@devvizard.ru" class="modal__link">
+						<svg
+							width="24"
+							height="24"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+						>
+							<path
+								d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+							></path>
+							<polyline points="22,6 12,13 2,6"></polyline>
+						</svg>
+						<span>contact@devvizard.ru</span>
+					</a>
+					<a
+						href="https://t.me/devvizard"
+						target="_blank"
+						class="modal__link"
+						rel="noopener noreferrer"
+					>
+						<svg
+							width="24"
+							height="24"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+						>
+							<path d="M22 2L11 13"></path>
+							<polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+						</svg>
+						<span>Telegram</span>
+					</a>
+				</div>
+			</div>
+		</div>
+		<script src="./js/ScrollTrigger.min.js"></script>
+		<script src="./js/gsap.min.js"></script>
+		<script src="./js/swiper-bundle.min.js"></script>
+		<script src="./js/main.js"></script>
+	</body>
+</html>

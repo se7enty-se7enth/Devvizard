@@ -1,0 +1,46 @@
+@use '../core/variables' as v;
+@use '../core/mixins' as m;
+
+.button {
+	@include m.flex(row, center, center);
+	cursor: pointer;
+	border-radius: 35px;
+	font-size: 1.25rem;
+	font-weight: 600;
+	width: max-content;
+	position: relative;
+	overflow: hidden;
+	z-index: 1;
+	background: hsla(0, 0%, 100%, 0.03);
+	border: 1px solid hsla(0, 0%, 100%, 0.08);
+	color: var(--color-light);
+	transition: color 0.3s ease;
+	outline: none;
+
+	&::before {
+		content: '';
+		position: absolute;
+		z-index: -1;
+		top: var(--mouse-y, 50%);
+		left: var(--mouse-x, 50%);
+		width: 800px;
+		aspect-ratio: 1;
+		border-radius: 50%;
+		background: var(--color-light);
+		transform: translate(-50%, -50%) scale(0);
+		transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+	}
+
+	&:hover {
+		color: var(--color-dark);
+
+		&::before {
+			transform: translate(-50%, -50%) scale(1);
+		}
+	}
+
+	&:focus-visible {
+		outline: 2px solid var(--color-light);
+		outline-offset: 2px;
+	}
+}

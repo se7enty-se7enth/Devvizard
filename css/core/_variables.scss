@@ -1,0 +1,23 @@
+:root {
+	--color-light: #f7f7f7;
+	--color-dark: #000;
+
+	--main-font: 'kanit', sans-serif;
+
+	--container-width: 1430px;
+	--container-padding-x: 20px;
+}
+
+$transition-duration: 0.2s;
+
+$breakpoints: (
+	sm: 576px,
+	// телефоны
+	md: 768px,
+	// маленькие планшеты
+	lg: 1024px,
+	// планшеты/ноуты
+	xl: 1280px,
+	// стандартные десктопы
+	xxl: 1440px, // широкие мониторы
+);
