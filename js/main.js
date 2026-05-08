@@ -30,77 +30,77 @@ document.addEventListener('DOMContentLoaded', () => {
 
 /* Курсор сайта */
 document.addEventListener('DOMContentLoaded', () => {
-    const dot = document.getElementById('cursor-dot')
-    const ring = document.getElementById('cursor-ring')
+	const dot = document.getElementById('cursor-dot')
+	const ring = document.getElementById('cursor-ring')
 
-    if (!dot || !ring) return
+	if (!dot || !ring) return
 
-    document.body.classList.add('js-cursor-active')
+	document.body.classList.add('js-cursor-active')
 
-    let mouseX = window.innerWidth / 2
-    let mouseY = window.innerHeight / 2
+	let mouseX = window.innerWidth / 2
+	let mouseY = window.innerHeight / 2
 
-    let ringX = mouseX
-    let ringY = mouseY
+	let ringX = mouseX
+	let ringY = mouseY
 
-    let isHovered = false
-    let isDragged = false
+	let isHovered = false
+	let isDragged = false
 
-    window.addEventListener('pointermove', (e) => {
-        mouseX = e.clientX
-        mouseY = e.clientY
-    }, { capture: true })
+	window.addEventListener('pointermove', (e) => {
+		mouseX = e.clientX
+		mouseY = e.clientY
+	}, { capture: true })
 
-    const interactives = document.querySelectorAll('a, button, input, textarea, .swiper-pagination-bullet')
-    interactives.forEach(el => {
-        el.addEventListener('mouseenter', () => {
-            ring.classList.add('cursor-ring--hover')
-            isHovered = true
-        })
-        el.addEventListener('mouseleave', () => {
-            ring.classList.remove('cursor-ring--hover')
-            isHovered = false
-        })
-    })
+	const interactives = document.querySelectorAll('a, button, input, textarea, .swiper-pagination-bullet')
+	interactives.forEach(el => {
+		el.addEventListener('mouseenter', () => {
+			ring.classList.add('cursor-ring--hover')
+			isHovered = true
+		})
+		el.addEventListener('mouseleave', () => {
+			ring.classList.remove('cursor-ring--hover')
+			isHovered = false
+		})
+	})
 
-    const swiperWrapper = document.querySelector('.swiper-wrapper')
-    if (swiperWrapper) {
-        swiperWrapper.addEventListener('mousedown', () => {
-            ring.classList.add('cursor-ring--drag')
-            isDragged = true
-        })
+	const swiperWrapper = document.querySelector('.swiper-wrapper')
+	if (swiperWrapper) {
+		swiperWrapper.addEventListener('mousedown', () => {
+			ring.classList.add('cursor-ring--drag')
+			isDragged = true
+		})
 
-        window.addEventListener('mouseup', () => {
-            ring.classList.remove('cursor-ring--drag')
-            isDragged = false
-        })
-    }
+		window.addEventListener('mouseup', () => {
+			ring.classList.remove('cursor-ring--drag')
+			isDragged = false
+		})
+	}
 
-    document.addEventListener('mouseleave', () => {
-        dot.style.opacity = '0'
-        ring.style.opacity = '0'
-    })
+	document.addEventListener('mouseleave', () => {
+		dot.style.opacity = '0'
+		ring.style.opacity = '0'
+	})
 
-    document.addEventListener('mouseenter', () => {
-        dot.style.opacity = '1'
-        ring.style.opacity = '1'
-    })
+	document.addEventListener('mouseenter', () => {
+		dot.style.opacity = '1'
+		ring.style.opacity = '1'
+	})
 
-    const render = () => {
-        ringX += (mouseX - ringX) * 0.3
-        ringY += (mouseY - ringY) * 0.3
+	const render = () => {
+		ringX += (mouseX - ringX) * 0.3
+		ringY += (mouseY - ringY) * 0.3
 
-        let ringOffset = 18
-        if (isHovered) ringOffset = 28
-        if (isDragged) ringOffset = 12
+		let ringOffset = 18
+		if (isHovered) ringOffset = 28
+		if (isDragged) ringOffset = 12
 
-        dot.style.transform = `translate3d(${mouseX - 3}px, ${mouseY - 3}px, 0)`
-        ring.style.transform = `translate3d(${ringX - ringOffset}px, ${ringY - ringOffset}px, 0)`
+		dot.style.transform = `translate3d(${mouseX - 3}px, ${mouseY - 3}px, 0)`
+		ring.style.transform = `translate3d(${ringX - ringOffset}px, ${ringY - ringOffset}px, 0)`
 
-        requestAnimationFrame(render)
-    }
+		requestAnimationFrame(render)
+	}
 
-    requestAnimationFrame(render)
+	requestAnimationFrame(render)
 })
 
 /* X-Ray на слове в hero */
@@ -272,5 +272,22 @@ document.addEventListener('DOMContentLoaded', () => {
 			delay: Number(delay),
 			clearProps: "all"
 		})
+	})
+})
+
+/* Логика Cookie Consent */
+document.addEventListener('DOMContentLoaded', () => {
+	const cookieBanner = document.getElementById('cookie-banner')
+	const cookieBtn = document.getElementById('cookie-accept')
+
+	if (!localStorage.getItem('cookies-accepted')) {
+		setTimeout(() => {
+			cookieBanner.classList.add('cookies--active')
+		}, 2000)
+	}
+
+	cookieBtn.addEventListener('click', () => {
+		cookieBanner.classList.remove('cookies--active')
+		localStorage.setItem('cookies-accepted', 'true')
 	})
 })

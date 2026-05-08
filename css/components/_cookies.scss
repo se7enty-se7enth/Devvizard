@@ -1,0 +1,59 @@
+@use '../core/variables' as v;
+@use '../core/mixins' as m;
+
+.cookies {
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+	z-index: 1000;
+	max-width: 400px;
+	background: rgba(255, 255, 255, 0.03);
+	border: 1px solid rgba(255, 255, 255, 0.08);
+	backdrop-filter: blur(15px);
+	-webkit-backdrop-filter: blur(15px);
+	border-radius: 20px;
+	padding: 24px;
+	opacity: 0;
+	visibility: hidden;
+	transform: translateY(20px);
+	transition: all 0.5s ease;
+
+	&--active {
+		opacity: 1;
+		visibility: visible;
+		transform: translateY(0);
+	}
+
+	&__content {
+		@include m.flex(column, flex-start, flex-start, 16px);
+	}
+
+	&__text {
+		font-size: 0.95rem;
+		line-height: 1.5;
+		color: rgba(255, 255, 255, 0.7);
+
+		a {
+			display: inline;
+			min-height: auto;
+			color: #fff;
+			text-decoration: underline;
+			opacity: 0.8;
+			&:hover {
+				opacity: 1;
+			}
+		}
+	}
+
+	&__button {
+		padding: 8px 24px;
+		font-size: 1rem;
+	}
+
+	@media (max-width: 576px) {
+		left: 15px;
+		right: 15px;
+		bottom: 15px;
+		max-width: none;
+	}
+}

@@ -22,9 +22,10 @@
 			content="Devvizard — магия чистого кода. Разработка сайтов/лендингов под ключ, адаптивная и быстрая верстка"
 		/>
 		<meta property="og:url" content="https://devvizard.ru/" />
-		<meta property="og:image" content="https://devvizard.ru/img/og-image.jpg" />
+		<!-- <meta property="og:image" content="https://devvizard.ru/img/og-image.jpg" /> -->
 		<meta property="og:site_name" content="Devvizard" />
 		<meta property="og:locale" content="ru_RU" />
+		<link rel="canonical" href="https://devvizard.ru/" />
 		<link
 			rel="preload"
 			href="./fonts/BebasNeue-Regular.woff2"
@@ -33,8 +34,8 @@
 			crossorigin
 		/>
 		<link rel="icon" type="image/svg+xml" href="./icons/logo.svg" />
-		<link rel="icon" type="image/png" href="./" />
-		<link rel="apple-touch-icon" href="./" />
+		<link rel="icon" type="image/png" href="./icons/logo.png" />
+		<!-- <link rel="apple-touch-icon" href="./" /> -->
 		<link rel="stylesheet" href="./css/swiper-bundle.min.css" />
 		<link rel="stylesheet" href="./css/main.css" />
 		<script type="text/javascript">
@@ -1068,6 +1069,22 @@
 						<span>Telegram</span>
 					</a>
 				</div>
+			</div>
+		</div>
+		<div class="cookies" id="cookie-banner">
+			<div class="cookies__content">
+				<p class="cookies__text">
+					Мы используем файлы cookie, чтобы сайт работал лучше. Оставаясь с нами, вы
+					соглашаетесь с
+					<a href="./privacy.html" class="cookies__link">политикой конфиденциальности</a>.
+				</p>
+				<button
+					type="button"
+					class="cookies__button button js-glow-card"
+					id="cookie-accept"
+				>
+					Понятно
+				</button>
 			</div>
 		</div>
 		<script src="./js/ScrollTrigger.min.js"></script>

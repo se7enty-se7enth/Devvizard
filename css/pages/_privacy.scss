@@ -54,7 +54,7 @@
 
 	&__title {
 		font-family: 'Bebas Neue', sans-serif;
-		font-size: 3.5rem;
+		font-size: 3rem;
 		margin-bottom: 40px;
 		color: var(--color-light);
 		letter-spacing: 1px;
@@ -67,12 +67,14 @@
 }
 
 .privacy-text {
+
+	&__title {
+		margin-block: 40px;
+	}
 	h2,
 	p strong {
-		display: block;
 		font-size: 1.5rem;
 		color: var(--color-light);
-		margin: 40px 0 15px;
 		font-weight: 600;
 	}
 
