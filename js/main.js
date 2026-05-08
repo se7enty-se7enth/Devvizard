@@ -30,75 +30,77 @@ document.addEventListener('DOMContentLoaded', () => {
 
 /* Курсор сайта */
 document.addEventListener('DOMContentLoaded', () => {
-	const dot = document.getElementById('cursor-dot')
-	const ring = document.getElementById('cursor-ring')
+    const dot = document.getElementById('cursor-dot')
+    const ring = document.getElementById('cursor-ring')
 
-	if (!dot || !ring) return
+    if (!dot || !ring) return
 
-	let mouseX = window.innerWidth / 2
-	let mouseY = window.innerHeight / 2
+    document.body.classList.add('js-cursor-active')
 
-	let ringX = mouseX
-	let ringY = mouseY
+    let mouseX = window.innerWidth / 2
+    let mouseY = window.innerHeight / 2
 
-	let isHovered = false
-	let isDragged = false
+    let ringX = mouseX
+    let ringY = mouseY
 
-	window.addEventListener('pointermove', (e) => {
-		mouseX = e.clientX
-		mouseY = e.clientY
-	}, { capture: true })
+    let isHovered = false
+    let isDragged = false
 
-	const interactives = document.querySelectorAll('a, button, input, textarea, .swiper-pagination-bullet')
-	interactives.forEach(el => {
-		el.addEventListener('mouseenter', () => {
-			ring.classList.add('cursor-ring--hover')
-			isHovered = true
-		})
-		el.addEventListener('mouseleave', () => {
-			ring.classList.remove('cursor-ring--hover')
-			isHovered = false
-		})
-	})
+    window.addEventListener('pointermove', (e) => {
+        mouseX = e.clientX
+        mouseY = e.clientY
+    }, { capture: true })
 
-	const swiperWrapper = document.querySelector('.swiper-wrapper')
-	if (swiperWrapper) {
-		swiperWrapper.addEventListener('mousedown', () => {
-			ring.classList.add('cursor-ring--drag')
-			isDragged = true
-		})
+    const interactives = document.querySelectorAll('a, button, input, textarea, .swiper-pagination-bullet')
+    interactives.forEach(el => {
+        el.addEventListener('mouseenter', () => {
+            ring.classList.add('cursor-ring--hover')
+            isHovered = true
+        })
+        el.addEventListener('mouseleave', () => {
+            ring.classList.remove('cursor-ring--hover')
+            isHovered = false
+        })
+    })
 
-		window.addEventListener('mouseup', () => {
-			ring.classList.remove('cursor-ring--drag')
-			isDragged = false
-		})
-	}
+    const swiperWrapper = document.querySelector('.swiper-wrapper')
+    if (swiperWrapper) {
+        swiperWrapper.addEventListener('mousedown', () => {
+            ring.classList.add('cursor-ring--drag')
+            isDragged = true
+        })
 
-	document.addEventListener('mouseleave', () => {
-		dot.style.opacity = '0'
-		ring.style.opacity = '0'
-	})
+        window.addEventListener('mouseup', () => {
+            ring.classList.remove('cursor-ring--drag')
+            isDragged = false
+        })
+    }
 
-	document.addEventListener('mouseenter', () => {
-		dot.style.opacity = '1'
-		ring.style.opacity = '1'
-	})
+    document.addEventListener('mouseleave', () => {
+        dot.style.opacity = '0'
+        ring.style.opacity = '0'
+    })
 
-	const render = () => {
-		ringX += (mouseX - ringX) * 0.3
-		ringY += (mouseY - ringY) * 0.3
+    document.addEventListener('mouseenter', () => {
+        dot.style.opacity = '1'
+        ring.style.opacity = '1'
+    })
 
-		let ringOffset = 18
-		if (isHovered) ringOffset = 28
-		if (isDragged) ringOffset = 12
+    const render = () => {
+        ringX += (mouseX - ringX) * 0.3
+        ringY += (mouseY - ringY) * 0.3
 
-		dot.style.transform = `translate3d(${mouseX - 3}px, ${mouseY - 3}px, 0)`
-		ring.style.transform = `translate3d(${ringX - ringOffset}px, ${ringY - ringOffset}px, 0)`
+        let ringOffset = 18
+        if (isHovered) ringOffset = 28
+        if (isDragged) ringOffset = 12
 
-		requestAnimationFrame(render)
-	}
+        dot.style.transform = `translate3d(${mouseX - 3}px, ${mouseY - 3}px, 0)`
+        ring.style.transform = `translate3d(${ringX - ringOffset}px, ${ringY - ringOffset}px, 0)`
 
-	requestAnimationFrame(render)
+        requestAnimationFrame(render)
+    }
+
+    requestAnimationFrame(render)
 })
 
 /* X-Ray на слове в hero */
@@ -265,8 +267,8 @@ document.addEventListener('DOMContentLoaded', () => {
 			},
 			y: 60,
 			opacity: 0,
-			duration: 1,
-			ease: "back.out(1.5)",
+			duration: 0.8,
+			ease: "back.out(1.3)",
 			delay: Number(delay),
 			clearProps: "all"
 		})

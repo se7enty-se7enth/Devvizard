@@ -1,6 +1,11 @@
 @use '../core/variables' as v;
 @use '../core/mixins' as m;
 
+.cursor-dot,
+.cursor-ring {
+	display: none !important;
+}
+
 @media (pointer: coarse) {
 	body,
 	a,
@@ -9,26 +14,22 @@
 	textarea {
 		cursor: auto !important;
 	}
-
-	.cursor-dot,
-	.cursor-ring {
-		display: none !important;
-	}
 }
 
 @media (pointer: fine) {
-	body,
-	a,
-	button,
-	input,
-	textarea,
-	.swiper-pagination-bullet,
-	.swiper,
-	.swiper-wrapper {
+	body.js-cursor-active,
+	body.js-cursor-active a,
+	body.js-cursor-active button,
+	body.js-cursor-active input,
+	body.js-cursor-active textarea,
+	body.js-cursor-active .swiper-pagination-bullet,
+	body.js-cursor-active .swiper,
+	body.js-cursor-active .swiper-wrapper {
 		cursor: none !important;
 	}
 
-	.cursor-dot {
+	body.js-cursor-active .cursor-dot {
+		display: block !important;
 		position: fixed;
 		top: 0;
 		left: 0;
@@ -42,7 +43,8 @@
 		transition: opacity 0.3s ease;
 	}
 
-	.cursor-ring {
+	body.js-cursor-active .cursor-ring {
+		display: block !important;
 		position: fixed;
 		top: 0;
 		left: 0;

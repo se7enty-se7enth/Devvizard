@@ -32,11 +32,50 @@
 			type="font/woff2"
 			crossorigin
 		/>
-		<link rel="icon" type="image/svg+xml" href="./" />
+		<link rel="icon" type="image/svg+xml" href="./icons/logo.svg" />
 		<link rel="icon" type="image/png" href="./" />
 		<link rel="apple-touch-icon" href="./" />
 		<link rel="stylesheet" href="./css/swiper-bundle.min.css" />
 		<link rel="stylesheet" href="./css/main.css" />
+		<script type="text/javascript">
+			;(function (m, e, t, r, i, k, a) {
+				m[i] =
+					m[i] ||
+					function () {
+						;(m[i].a = m[i].a || []).push(arguments)
+					}
+				m[i].l = 1 * new Date()
+				for (var j = 0; j < document.scripts.length; j++) {
+					if (document.scripts[j].src === r) {
+						return
+					}
+				}
+				;((k = e.createElement(t)),
+					(a = e.getElementsByTagName(t)[0]),
+					(k.async = 1),
+					(k.src = r),
+					a.parentNode.insertBefore(k, a))
+			})(window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js?id=109121493', 'ym')
+
+			ym(109121493, 'init', {
+				ssr: true,
+				webvisor: true,
+				clickmap: true,
+				ecommerce: 'dataLayer',
+				referrer: document.referrer,
+				url: location.href,
+				accurateTrackBounce: true,
+				trackLinks: true,
+			})
+		</script>
+		<noscript
+			><div>
+				<img
+					src="https://mc.yandex.ru/watch/109121493"
+					style="position: absolute; left: -9999px"
+					alt=""
+				/></div
+		></noscript>
 	</head>
 	<body class="index">
 		<noscript>
@@ -295,6 +334,51 @@
 						<li class="portfolio__item js-fade-up">
 							<article class="portfolio-card js-glow-card">
 								<a
+									href="https://sbrandili.ru"
+									target="_blank"
+									rel="noopener noreferrer"
+									class="portfolio-card__link"
+									aria-label="Посмотреть проект Сбрендели"
+								></a>
+
+								<div class="portfolio-card__glow"></div>
+
+								<div class="portfolio-card__content">
+									<div class="portfolio-card__img">
+										<img
+											src="./img/sbrandili.webp"
+											alt="Проект: Sbrandili"
+											loading="lazy"
+											decoding="async"
+										/>
+									</div>
+									<div class="portfolio-card__body">
+										<time class="portfolio-card__date">2026</time>
+										<div class="portfolio-card__title">
+											<h3>Сбрендели</h3>
+										</div>
+										<div class="portfolio-card__text">
+											<p>
+												Фронтенд-разработка внутренних страниц для сайта
+												авторской дизайн-студии и брендингового агентства.
+											</p>
+											<p>
+												Сверстана основная часть структуры: страницы услуг,
+												детальные кейсы и объемное портфолио (видеоролики,
+												иллюстрации, брендинг). Так как заказчик —
+												профессиональная дизайн-команда, особый упор делался
+												на Pixel Perfect верстку и точную передачу
+												креативных макетов в код.
+											</p>
+										</div>
+									</div>
+								</div>
+							</article>
+						</li>
+
+						<li class="portfolio__item js-fade-up">
+							<article class="portfolio-card js-glow-card">
+								<a
 									href="https://lepninaizgipsa.ru/?ysclid=mow1ek0geo719813981"
 									target="_blank"
 									rel="noopener noreferrer"
@@ -375,51 +459,6 @@
 												реагирует на скролл, а интерактивные элементы и
 												нестандартные слайдеры работают без рывков на любых
 												устройствах.
-											</p>
-										</div>
-									</div>
-								</div>
-							</article>
-						</li>
-
-						<li class="portfolio__item js-fade-up">
-							<article class="portfolio-card js-glow-card">
-								<a
-									href="https://sbrandili.ru"
-									target="_blank"
-									rel="noopener noreferrer"
-									class="portfolio-card__link"
-									aria-label="Посмотреть проект Сбрендели"
-								></a>
-
-								<div class="portfolio-card__glow"></div>
-
-								<div class="portfolio-card__content">
-									<div class="portfolio-card__img">
-										<img
-											src="./img/sbrandili.webp"
-											alt="Проект: Sbrandili"
-											loading="lazy"
-											decoding="async"
-										/>
-									</div>
-									<div class="portfolio-card__body">
-										<time class="portfolio-card__date">2026</time>
-										<div class="portfolio-card__title">
-											<h3>Сбрендели</h3>
-										</div>
-										<div class="portfolio-card__text">
-											<p>
-												Фронтенд-разработка внутренних страниц для сайта
-												авторской дизайн-студии и брендингового агентства.
-											</p>
-											<p>
-												Сверстана основная часть структуры: страницы услуг,
-												детальные кейсы и объемное портфолио (видеоролики,
-												иллюстрации, брендинг). Так как заказчик —
-												профессиональная дизайн-команда, особый упор делался
-												на Pixel Perfect верстку и точную передачу
-												креативных макетов в код.
 											</p>
 										</div>
 									</div>
@@ -960,7 +999,7 @@
 					</div>
 
 					<div class="footer__legal">
-						<a href="#">Политика конфиденциальности</a>
+						<a href="./privacy.html">Политика конфиденциальности</a>
 					</div>
 				</div>
 			</div>
