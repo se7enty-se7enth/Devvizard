@@ -21,7 +21,6 @@
 	align-items: center;
 	gap: 12px;
 	color: rgba(255, 255, 255, 0.6);
-	text-decoration: none;
 	font-size: 1.125rem;
 	margin-bottom: 40px;
 	transition:
@@ -44,8 +43,8 @@
 .privacy-card {
 	background: rgba(255, 255, 255, 0.03);
 	border: 1px solid rgba(255, 255, 255, 0.08);
-	border-radius: 24px;
-	padding: 60px;
+	border-radius: 8px;
+	padding: 50px;
 	backdrop-filter: blur(20px);
 	-webkit-backdrop-filter: blur(20px);
 
@@ -53,7 +52,7 @@
 		padding: 40px 20px;
 	}
 
-	h1 {
+	&__title {
 		font-family: 'Bebas Neue', sans-serif;
 		font-size: 3.5rem;
 		margin-bottom: 40px;
@@ -87,7 +86,6 @@
 	ul {
 		margin-bottom: 24px;
 		padding-left: 20px;
-		list-style-type: none;
 
 		li {
 			position: relative;
@@ -101,9 +99,10 @@
 				content: '';
 				position: absolute;
 				left: 0;
-				top: 10px;
-				width: 6px;
-				height: 6px;
+				top: 50%;
+				transform: translateY(-50%);
+				width: 7px;
+				aspect-ratio: 1;
 				border-radius: 50%;
 				background-color: rgba(255, 255, 255, 0.4);
 			}
