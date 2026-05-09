@@ -36,7 +36,7 @@
 		a {
 			display: inline;
 			min-height: auto;
-			color: #fff;
+			color: var(--color-light);
 			text-decoration: underline;
 			opacity: 0.8;
 			&:hover {

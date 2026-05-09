@@ -172,17 +172,19 @@ window.addEventListener('mousemove', (e) => {
 	}
 })
 
-/* Логика свечения бенто карточек */
-const bentoCards = document.querySelectorAll('.js-glow-card')
+/* Логика свечения js-glow-card */
+document.addEventListener('DOMContentLoaded', () => {
+	const glowCards = document.querySelectorAll('.js-glow-card')
 
-bentoCards.forEach(card => {
-	card.addEventListener('mousemove', (e) => {
-		const rect = card.getBoundingClientRect()
-		const x = e.clientX - rect.left
-		const y = e.clientY - rect.top
+	glowCards.forEach(card => {
+		card.addEventListener('mousemove', (e) => {
+			const rect = card.getBoundingClientRect()
+			const x = e.clientX - rect.left
+			const y = e.clientY - rect.top
 
-		card.style.setProperty('--mouse-x', `${x}px`)
-		card.style.setProperty('--mouse-y', `${y}px`)
+			card.style.setProperty('--mouse-x', `${x}px`)
+			card.style.setProperty('--mouse-y', `${y}px`)
+		})
 	})
 })
 
@@ -283,11 +285,32 @@ document.addEventListener('DOMContentLoaded', () => {
 	if (!localStorage.getItem('cookies-accepted')) {
 		setTimeout(() => {
 			cookieBanner.classList.add('cookies--active')
-		}, 2000)
+		}, 1500)
 	}
 
 	cookieBtn.addEventListener('click', () => {
 		cookieBanner.classList.remove('cookies--active')
 		localStorage.setItem('cookies-accepted', 'true')
 	})
+})
+
+/* Обработка перехода по якорю с другой страницы */
+window.addEventListener('load', () => {
+	const targetId = window.location.hash
+	if (!targetId) return
+
+	const targetElement = document.querySelector(targetId)
+	const header = document.querySelector('.header')
+
+	if (targetElement) {
+		setTimeout(() => {
+			const headerHeight = header ? header.offsetHeight : 0
+			const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset
+
+			window.scrollTo({
+				top: targetPosition - headerHeight - 20,
+				behavior: 'smooth'
+			})
+		}, 100)
+	}
 })
