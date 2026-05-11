@@ -111,6 +111,7 @@
 		@media (max-width: 768px) {
 			font-size: 1.125rem;
 			padding: 20px;
+			text-align: left;
 		}
 	}
 
@@ -191,5 +192,9 @@
 			border-top: 1px solid rgba(255, 255, 255, 0.05);
 			width: 100%;
 		}
+	}
+
+	@include m.down(md) {
+		padding: 100px 0 180px;
 	}
 }

@@ -43,12 +43,13 @@
 
 	&__header {
 		margin-bottom: 50px;
+		text-align: center;
 		@include m.flex(column, center, center, 15px);
 	}
 
 	&__title {
 		font-family: 'bebas', sans-serif;
-		font-size: 2.625rem;
+		font-size: clamp(1.75rem, 3vw + 1rem, 2.625rem);
 		font-weight: 600;
 		letter-spacing: 1px;
 	}

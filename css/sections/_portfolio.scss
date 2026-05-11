@@ -78,7 +78,7 @@
 			align-items: stretch;
 			transition: background 0.3s ease;
 
-			@media (max-width: 768px) {
+			@include m.down(lg) {
 				flex-direction: column;
 			}
 		}
@@ -90,7 +90,7 @@
 			overflow: hidden;
 			border-radius: 9px 0 0 9px;
 
-			@media (max-width: 768px) {
+			@include m.down(md) {
 				flex: none;
 				height: 200px;
 				border-radius: 9px 9px 0 0;
@@ -109,7 +109,7 @@
 			@include m.flex(column, flex-start, stretch, 15px);
 			color: var(--color-light);
 
-			@media (max-width: 768px) {
+			@include m.down(md) {
 				padding: 20px;
 			}
 		}

@@ -22,7 +22,19 @@
 			'main main style'
 			'tools git style';
 
-		@media (max-width: 992px) {
+		@include m.down(xxl) {
+			grid-auto-rows: minmax(200px, auto);
+		}
+
+		@include m.down(xl) {
+			grid-auto-rows: minmax(180px, auto);
+		}
+
+		@include m.down(lg) {
+			grid-auto-rows: minmax(160px, auto);
+		}
+
+		@include m.down(lg) {
 			grid-template-columns: repeat(2, 1fr);
 			grid-template-areas:
 				'main main'
@@ -31,7 +43,7 @@
 				'tools git';
 		}
 
-		@media (max-width: 576px) {
+		@include m.down(sm) {
 			grid-template-columns: 1fr;
 			grid-auto-rows: auto;
 			grid-template-areas:
@@ -40,6 +52,10 @@
 				'tools'
 				'git';
 		}
+	}
+
+	@include m.down(md) {
+		padding: 180px 0;
 	}
 }
 
@@ -120,6 +136,7 @@
 	&__title {
 		font-family: 'bebas', sans-serif;
 		font-size: 2.15rem;
+		font-size: clamp(1.75rem, 2.5vw, 2.15rem);
 		line-height: 1.1;
 		margin-bottom: 15px;
 		letter-spacing: 1px;
