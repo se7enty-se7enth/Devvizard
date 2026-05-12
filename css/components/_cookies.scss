@@ -39,7 +39,8 @@
 			color: var(--color-light);
 			text-decoration: underline;
 			opacity: 0.8;
-			&:hover {
+
+			@include m.hover {
 				opacity: 1;
 			}
 		}

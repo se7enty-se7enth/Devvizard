@@ -31,7 +31,7 @@
 		transition: transform 0.3s ease;
 	}
 
-	&:hover {
+	@include m.hover {
 		color: var(--color-light);
 
 		svg {
@@ -67,7 +67,6 @@
 }
 
 .privacy-text {
-
 	&__title {
 		margin-block: 40px;
 	}

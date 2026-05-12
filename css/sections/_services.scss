@@ -72,13 +72,6 @@
 		box-shadow 0.4s ease;
 	will-change: transform;
 
-	&:hover {
-		transform: scale(1.01);
-		background: rgba(255, 255, 255, 0.15);
-		z-index: 10;
-		box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-	}
-
 	&--main {
 		grid-area: main;
 	}
@@ -105,10 +98,6 @@
 		);
 	}
 
-	&:hover &__glow {
-		opacity: 1;
-	}
-
 	&__content {
 		position: relative;
 		z-index: 2;
@@ -118,10 +107,6 @@
 		height: 100%;
 		@include m.flex(column, flex-start, stretch, 0);
 		transition: background 0.3s ease;
-	}
-
-	&:hover &__content {
-		background-color: #0f0f0f;
 	}
 
 	&__tag {
@@ -154,5 +139,20 @@
 		font-family: 'Courier New', monospace;
 		font-size: 0.875rem;
 		color: rgba(255, 255, 255, 0.2);
+	}
+
+	@include m.hover {
+		transform: scale(1.01);
+		background: rgba(255, 255, 255, 0.15);
+		z-index: 10;
+		box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+
+		.service-card__glow {
+			opacity: 1;
+		}
+
+		.service-card__content {
+			background-color: #0f0f0f;
+		}
 	}
 }

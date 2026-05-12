@@ -56,7 +56,7 @@
 			border-color 0.3s ease,
 			transform 0.3s ease;
 
-		&:hover {
+		@include m.hover {
 			background: hsla(0, 0%, 100%, 0.06);
 			border-color: hsla(0, 0%, 100%, 0.2);
 			transform: translateY(-2px);
@@ -73,6 +73,7 @@
 		font-size: 1.125rem;
 		font-weight: 600;
 		color: var(--color-light);
+		@include m.flex(row, center, center, 5px);
 	}
 
 	&__bottom {
@@ -91,7 +92,7 @@
 		opacity: 0.6;
 		transition: opacity 0.3s ease;
 
-		&:hover {
+		@include m.hover {
 			opacity: 1;
 		}
 
@@ -111,7 +112,9 @@
 		transition: color 0.3s ease;
 	}
 
-	&__legal a:hover {
-		color: var(--color-light);
+	&__legal a {
+		@include m.hover {
+			color: var(--color-light);
+		}
 	}
 }

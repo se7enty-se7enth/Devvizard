@@ -35,7 +35,7 @@
 				background: #ffffff;
 			}
 
-			&:hover {
+			@include m.hover {
 				background: hsla(0, 0%, 100%, 0.7);
 			}
 		}
@@ -75,7 +75,7 @@
 		background 0.3s ease,
 		border-color 0.3s ease;
 
-	&:hover {
+	@include m.hover {
 		background: hsla(0, 0%, 100%, 0.05);
 		border-color: hsla(0, 0%, 100%, 0.15);
 	}
@@ -132,7 +132,7 @@
 			color 0.2s ease,
 			background 0.2s ease;
 
-		&:hover {
+		@include m.hover {
 			color: #ffffff;
 			background: hsla(0, 0%, 100%, 0.1);
 		}
