@@ -257,7 +257,7 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('DOMContentLoaded', () => {
 	if (document.querySelector('.js-reviews-slider')) {
 		new Swiper('.js-reviews-slider', {
-			loop: true, grabCursor: true, spaceBetween: 24, speed: 1500,
+			loop: true, grabCursor: true, spaceBetween: 24, speed: 1000,
 			autoplay: { delay: 3000, disableOnInteraction: false },
 			pagination: { el: '.reviews__pagination', clickable: true },
 			breakpoints: { 320: { slidesPerView: 1 }, 768: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } }

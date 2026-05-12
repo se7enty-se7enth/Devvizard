@@ -141,18 +141,20 @@
 		color: rgba(255, 255, 255, 0.2);
 	}
 
-	@include m.hover {
-		transform: scale(1.01);
-		background: rgba(255, 255, 255, 0.15);
-		z-index: 10;
-		box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+	@media (min-width: 1024px) {
+		@include m.hover {
+			transform: scale(1.01);
+			background: rgba(255, 255, 255, 0.15);
+			z-index: 10;
+			box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 
-		.service-card__glow {
-			opacity: 1;
-		}
+			.service-card__glow {
+				opacity: 1;
+			}
 
-		.service-card__content {
-			background-color: #0f0f0f;
+			.service-card__content {
+				background-color: #0f0f0f;
+			}
 		}
 	}
 }
