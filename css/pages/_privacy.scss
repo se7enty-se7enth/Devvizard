@@ -54,15 +54,12 @@
 
 	&__title {
 		font-family: 'Bebas Neue', sans-serif;
-		font-size: 3rem;
+		font-size: clamp(1.6rem, 2.5vw + 1rem, 3rem);
 		margin-bottom: 40px;
 		color: var(--color-light);
 		letter-spacing: 1px;
 		line-height: 1.1;
-
-		@media (max-width: 768px) {
-			font-size: 2.5rem;
-		}
+		text-align: center;
 	}
 }
 
@@ -72,7 +69,7 @@
 	}
 	h2,
 	p strong {
-		font-size: 1.5rem;
+		font-size: clamp(1.2rem, 1vw + 1rem, 1.5rem);
 		color: var(--color-light);
 		font-weight: 600;
 	}
