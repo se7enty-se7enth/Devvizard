@@ -77,6 +77,7 @@
 			flex-direction: row;
 			align-items: stretch;
 			transition: background 0.3s ease;
+			font-family: 'bebas';
 
 			@include m.down(lg) {
 				flex-direction: column;
@@ -120,8 +121,8 @@
 		}
 
 		&__title {
-			font-weight: 600;
 			font-size: 2rem;
+			font-family: 'bebas';
 		}
 
 		&__text {

@@ -5,6 +5,7 @@
 	position: relative;
 	min-height: calc(100vh - 250px);
 	@include m.flex(row, flex-start, center, 0);
+	font-family: 'bebas', sans-serif;
 
 	&__container {
 		display: grid;
@@ -32,7 +33,6 @@
 	}
 
 	&__title h1 {
-		font-family: 'bebas', sans-serif;
 		font-size: clamp(60px, 7vw, 110px);
 		line-height: 1;
 		letter-spacing: 2px;

@@ -136,9 +136,12 @@
 	&__footer {
 		margin-top: auto;
 		padding-top: 30px;
-		font-family: 'Courier New', monospace;
 		font-size: 0.875rem;
 		color: rgba(255, 255, 255, 0.2);
+
+		code {
+			font-family: 'Courier New', monospace;
+		}
 	}
 
 	@media (min-width: 1024px) {

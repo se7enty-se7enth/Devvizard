@@ -8,6 +8,7 @@
 	color: #d9d9d9;
 	padding: 80px 0;
 	min-height: 100vh;
+	font-family: 'bebas', sans-serif;
 }
 
 .privacy-container {
@@ -53,7 +54,6 @@
 	}
 
 	&__title {
-		font-family: 'Bebas Neue', sans-serif;
 		font-size: clamp(1.6rem, 2.5vw + 1rem, 3rem);
 		margin-bottom: 40px;
 		color: var(--color-light);
@@ -106,4 +106,8 @@
 			}
 		}
 	}
+}
+
+.devvizard {
+	letter-spacing: 1px;
 }
