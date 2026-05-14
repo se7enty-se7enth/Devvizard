@@ -105,6 +105,16 @@
 			visibility: visible !important;
 			transform: none !important;
 		}
+
+		// Прячем мобильную кнопку на компах
+		&--mobile-btn {
+			@media (min-width: 1301px) {
+				display: none !important;
+			}
+			@media (max-width: 1300px) {
+				margin-top: 20px; // Отделяем кнопку от ссылок
+			}
+		}
 	}
 
 	&__nav-link {
@@ -170,8 +180,21 @@
 	&__button {
 		padding: 10px 20px;
 
-		@media (max-width: 1300px) {
-			display: none;
+		// Прячем десктопную кнопку на мобилках
+		&--desktop {
+			@media (max-width: 1300px) {
+				display: none;
+			}
+		}
+
+		// Стилизуем мобильную, чтобы она не была слишком мелкой
+		&--mobile {
+			@media (max-width: 1300px) {
+				font-size: 1.5rem;
+				padding: 15px 30px;
+				font-family: 'bebas', sans-serif;
+				letter-spacing: 1px;
+			}
 		}
 	}
 }

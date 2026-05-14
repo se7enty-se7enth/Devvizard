@@ -95,6 +95,14 @@ document.addEventListener('DOMContentLoaded', () => {
 		})
 	})
 
+	// НОВОЕ: Закрываем меню при клике на мобильную кнопку "Обсудить проект"
+	const mobileBtn = document.querySelector('.header__button--mobile')
+	if (mobileBtn) {
+		mobileBtn.addEventListener('click', () => {
+			if (isMenuOpen) toggleMenu()
+		})
+	}
+
 	nav.addEventListener('click', (e) => {
 		if (e.target === nav && isMenuOpen) toggleMenu()
 	})
@@ -123,12 +131,13 @@ document.addEventListener('DOMContentLoaded', () => {
    3. МОДАЛКА "ОБСУДИТЬ ПРОЕКТ"
    ========================================================================== */
 document.addEventListener('DOMContentLoaded', () => {
-	const btnOpen = document.querySelector('.header__button')
+	// НОВОЕ: Ищем все кнопки, так как теперь их две (десктоп и мобилка)
+	const btnsOpen = document.querySelectorAll('.header__button')
 	const modal = document.getElementById('contact-modal')
 	const btnClose = document.getElementById('modal-close')
 	const overlay = document.getElementById('modal-overlay')
 
-	if (!btnOpen || !modal) return
+	if (btnsOpen.length === 0 || !modal) return
 
 	overlay.addEventListener('touchmove', (e) => e.preventDefault(), { passive: false })
 
@@ -142,7 +151,11 @@ document.addEventListener('DOMContentLoaded', () => {
 		if (window.lenis) window.lenis.start()
 	}
 
-	btnOpen.addEventListener('click', openModal)
+	// НОВОЕ: Вешаем событие открытия на каждую найденную кнопку
+	btnsOpen.forEach(btn => {
+		btn.addEventListener('click', openModal)
+	})
+
 	btnClose.addEventListener('click', closeModal)
 	overlay.addEventListener('click', closeModal)
 

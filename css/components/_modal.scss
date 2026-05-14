@@ -2,6 +2,8 @@
 @use '../core/mixins' as m;
 
 .modal {
+	font-family: 'bebas', sans-serif;
+	letter-spacing: 1px;
 	position: fixed;
 	inset: 0;
 	z-index: 1200;
@@ -101,7 +103,7 @@
 			background-color: rgba(255, 255, 255, 0.1);
 			border-color: rgba(255, 255, 255, 0.15);
 			transform: translateX(5px);
-			
+
 			svg {
 				opacity: 1;
 			}
