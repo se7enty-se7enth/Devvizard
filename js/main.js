@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	const itemsTl = gsap.timeline({ paused: true })
 	itemsTl.fromTo('.header__nav-item',
 		{ y: 40, opacity: 0 },
-		{ y: 0, opacity: 1, stagger: 0.1, duration: 0.4, ease: 'back.out(1.5)', immediateRender: false }
+		{ y: 0, opacity: 1, stagger: 0.1, duration: 0.4, ease: 'back.out(1.5)', delay: 0.1 }
 	)
 
 	nav.addEventListener('touchmove', (e) => e.preventDefault(), { passive: false })
