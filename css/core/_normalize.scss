@@ -23,12 +23,9 @@ body {
 
 a {
 	text-decoration: none;
+	color: inherit;
 	cursor: pointer;
 	background-color: transparent;
-}
-
-a:where([class]) {
-	display: inline-flex;
 }
 
 img,

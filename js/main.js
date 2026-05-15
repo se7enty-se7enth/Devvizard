@@ -95,7 +95,6 @@ document.addEventListener('DOMContentLoaded', () => {
 		})
 	})
 
-	// НОВОЕ: Закрываем меню при клике на мобильную кнопку "Обсудить проект"
 	const mobileBtn = document.querySelector('.header__button--mobile')
 	if (mobileBtn) {
 		mobileBtn.addEventListener('click', () => {
@@ -131,7 +130,6 @@ document.addEventListener('DOMContentLoaded', () => {
    3. МОДАЛКА "ОБСУДИТЬ ПРОЕКТ"
    ========================================================================== */
 document.addEventListener('DOMContentLoaded', () => {
-	// НОВОЕ: Ищем все кнопки, так как теперь их две (десктоп и мобилка)
 	const btnsOpen = document.querySelectorAll('.header__button')
 	const modal = document.getElementById('contact-modal')
 	const btnClose = document.getElementById('modal-close')
@@ -151,7 +149,6 @@ document.addEventListener('DOMContentLoaded', () => {
 		if (window.lenis) window.lenis.start()
 	}
 
-	// НОВОЕ: Вешаем событие открытия на каждую найденную кнопку
 	btnsOpen.forEach(btn => {
 		btn.addEventListener('click', openModal)
 	})
@@ -255,11 +252,23 @@ document.addEventListener('DOMContentLoaded', () => {
    ========================================================================== */
 document.addEventListener('DOMContentLoaded', () => {
 	const faqItems = document.querySelectorAll('.js-faq-item')
+
 	faqItems.forEach(item => {
-		item.querySelector('.faq__question')?.addEventListener('click', () => {
+		const btn = item.querySelector('.faq__question')
+
+		btn?.addEventListener('click', () => {
 			const isActive = item.classList.contains('is-active')
-			faqItems.forEach(el => el.classList.remove('is-active'))
-			if (!isActive) item.classList.add('is-active')
+
+			faqItems.forEach(el => {
+				el.classList.remove('is-active')
+				const elBtn = el.querySelector('.faq__question')
+				if (elBtn) elBtn.setAttribute('aria-expanded', 'false')
+			})
+
+			if (!isActive) {
+				item.classList.add('is-active')
+				btn.setAttribute('aria-expanded', 'true')
+			}
 		})
 	})
 })

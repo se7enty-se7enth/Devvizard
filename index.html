@@ -69,6 +69,8 @@
 				trackLinks: true,
 			})
 		</script>
+	</head>
+	<body class="index">
 		<noscript
 			><div>
 				<img
@@ -77,8 +79,6 @@
 					alt=""
 				/></div
 		></noscript>
-	</head>
-	<body class="index">
 		<noscript>
 			<p>
 				Ваш браузер не поддерживает JavaScript, почти все элементы и функции сайта, буду
@@ -86,12 +86,12 @@
 				бразуер или включить JavaScript
 			</p>
 		</noscript>
-		<div class="noise-overlay"></div>
-		<div class="cursor-dot" id="cursor-dot"></div>
-		<div class="cursor-ring" id="cursor-ring"></div>
+		<div class="noise-overlay" aria-hidden="true"></div>
+		<div class="cursor-dot" id="cursor-dot" aria-hidden="true"></div>
+		<div class="cursor-ring" id="cursor-ring" aria-hidden="true"></div>
 		<header class="header">
 			<div class="container header__container">
-				<a href="#" class="header__logo logo">
+				<a href="#" class="header__logo logo" aria-current="page">
 					<span>Devvizard</span>
 				</a>
 				<button type="button" class="header__menu-toggle" id="menu-toggle">
@@ -154,8 +154,9 @@
 							</h1>
 						</div>
 						<p class="hero__subtitle">
-							Студия веб-разработки Devvizard. Создаем сайты разных сложностей,
-							внедряя лучшие фронтенд-решения на базе чистого кода.
+							Студия веб-разработки <span class="devvizard">Devvizard</span>. Создаем
+							сайты разных сложностей, внедряя лучшие фронтенд-решения на базе чистого
+							кода.
 						</p>
 						<p class="hero__subtitle">
 							Формируем визуальную логику интерфейсов и проектируем пользовательский
@@ -249,7 +250,7 @@
 						<div class="service-card service-card--main js-glow-card js-fade-up">
 							<div class="service-card__glow"></div>
 							<div class="service-card__content">
-								<span class="service-card__tag">Solutions</span>
+								<span class="service-card__tag" lang="en">Solutions</span>
 								<div class="service-card__title">
 									<h3>Разработка сайтов</h3>
 								</div>
@@ -262,7 +263,7 @@
 									</p>
 								</div>
 								<div class="service-card__footer">
-									<code>UI/UX Logic // Frontend // Reliability</code>
+									<code lang="en">UI/UX Logic // Frontend // Reliability</code>
 								</div>
 							</div>
 						</div>
@@ -273,7 +274,7 @@
 						>
 							<div class="service-card__glow"></div>
 							<div class="service-card__content">
-								<span class="service-card__tag">Performance</span>
+								<span class="service-card__tag" lang="en">Performance</span>
 								<div class="service-card__title">
 									<h3>Чистая верстка и SEO-стандарты</h3>
 								</div>
@@ -285,7 +286,7 @@
 									</p>
 								</div>
 								<div class="service-card__footer">
-									<code>Tailwind // BEM // Core Web Vitals</code>
+									<code lang="en">Tailwind // BEM // Core Web Vitals</code>
 								</div>
 							</div>
 						</div>
@@ -307,7 +308,7 @@
 									</p>
 								</div>
 								<div class="service-card__footer">
-									<code>Bugfix // Refactoring // Responsive</code>
+									<code lang="en">Bugfix // Refactoring // Responsive</code>
 								</div>
 							</div>
 						</div>
@@ -329,7 +330,7 @@
 									</p>
 								</div>
 								<div class="service-card__footer">
-									<code>Support // Maintenance</code>
+									<code lang="en">Support // Maintenance</code>
 								</div>
 							</div>
 						</div>
@@ -364,7 +365,7 @@
 									<div class="portfolio-card__img">
 										<img
 											src="./img/sbrandili.webp"
-											alt="Проект: Sbrandili"
+											alt="Скриншот главной страницы разработанного сайта Sbrandili"
 											loading="lazy"
 											decoding="async"
 										/>
@@ -409,7 +410,7 @@
 									<div class="portfolio-card__img">
 										<img
 											src="./img/grand-decor.webp"
-											alt="Проект: Grand-decor"
+											alt="Скриншот главной страницы разработанного сайта Grand-decor"
 											loading="lazy"
 											decoding="async"
 										/>
@@ -453,7 +454,7 @@
 									<div class="portfolio-card__img">
 										<img
 											src="./img/city-center.webp"
-											alt="Проект: City Center"
+											alt="Скриншот главной страницы разработанного сайта City Center"
 											loading="lazy"
 											decoding="async"
 										/>
@@ -505,7 +506,7 @@
 						<div class="faq__card js-glow-card">
 							<div class="faq__glow"></div>
 							<div class="faq__item js-faq-item">
-								<button class="faq__question" type="button">
+								<button class="faq__question" type="button" aria-expanded="false">
 									<span>Как формируется цена на разработку?</span>
 									<span class="faq__icon"></span>
 								</button>
@@ -529,7 +530,7 @@
 						<div class="faq__card js-glow-card">
 							<div class="faq__glow"></div>
 							<div class="faq__item js-faq-item">
-								<button class="faq__question" type="button">
+								<button class="faq__question" type="button" aria-expanded="false">
 									<span>Как происходит оплата? Вы работаете официально?</span>
 									<span class="faq__icon"></span>
 								</button>
@@ -553,7 +554,7 @@
 						<div class="faq__card js-glow-card">
 							<div class="faq__glow"></div>
 							<div class="faq__item js-faq-item">
-								<button class="faq__question" type="button">
+								<button class="faq__question" type="button" aria-expanded="false">
 									<span
 										>Какие реальные сроки разработки и как вносятся
 										правки?</span
@@ -589,7 +590,7 @@
 						<div class="faq__card js-glow-card">
 							<div class="faq__glow"></div>
 							<div class="faq__item js-faq-item">
-								<button class="faq__question" type="button">
+								<button class="faq__question" type="button" aria-expanded="false">
 									<span>А что если нет макета? Что нужно для старта работы?</span>
 									<span class="faq__icon"></span>
 								</button>
@@ -636,7 +637,7 @@
 						<div class="faq__card js-glow-card">
 							<div class="faq__glow"></div>
 							<div class="faq__item js-faq-item">
-								<button class="faq__question" type="button">
+								<button class="faq__question" type="button" aria-expanded="false">
 									<span>Что НЕ входит в базовую стоимость разработки?</span>
 									<span class="faq__icon"></span>
 								</button>
@@ -662,7 +663,7 @@
 						<div class="faq__card js-glow-card">
 							<div class="faq__glow"></div>
 							<div class="faq__item js-faq-item">
-								<button class="faq__question" type="button">
+								<button class="faq__question" type="button" aria-expanded="false">
 									<span
 										>Вы поможете с запуском в интернет? Есть ли гарантия?</span
 									>
@@ -693,7 +694,7 @@
 						<div class="faq__card js-glow-card">
 							<div class="faq__glow"></div>
 							<div class="faq__item js-faq-item">
-								<button class="faq__question" type="button">
+								<button class="faq__question" type="button" aria-expanded="false">
 									<span>Смогу ли я сам редактировать контент после сдачи?</span>
 									<span class="faq__icon"></span>
 								</button>
@@ -999,7 +1000,7 @@
 						>
 							<span class="footer__contact-label">Быстрая связь</span>
 							<span class="footer__contact-value">
-								<p>Telegram</p>
+								<span>Telegram</span>
 								<svg
 									width="24"
 									height="24"
@@ -1009,6 +1010,7 @@
 									stroke-width="2"
 									stroke-linecap="round"
 									stroke-linejoin="round"
+									aria-hidden="true"
 								>
 									<path d="M7 17l9.2-9.2M17 17V7H7" />
 								</svg>
@@ -1018,7 +1020,7 @@
 						<a href="mailto:contact@devvizard.ru" class="footer__contact-card">
 							<span class="footer__contact-label">Быстрая связь подольше</span>
 							<span class="footer__contact-value">
-								<p>contact@devvizard.ru</p>
+								<span>contact@devvizard.ru</span>
 								<svg
 									width="24"
 									height="24"
@@ -1028,9 +1030,9 @@
 									stroke-width="2"
 									stroke-linecap="round"
 									stroke-linejoin="round"
+									aria-hidden="true"
 								>
 									<path d="M7 17l9.2-9.2M17 17V7H7" />
-									↗
 								</svg>
 							</span>
 						</a>
