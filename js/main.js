@@ -330,3 +330,41 @@ window.addEventListener('load', () => {
 		}
 	}
 })
+
+/* ==========================================================================
+   11. ЭФФЕКТ СЛОТ-МАШИНЫ ДЛЯ 404
+   ========================================================================== */
+document.addEventListener('DOMContentLoaded', () => {
+	const errorTitle = document.querySelector('.error-screen__title h1')
+
+	if (errorTitle) {
+		const finalDigits = ['4', '0', '4']
+		const duration = 1500
+		const frameRate = 40
+
+		let currentStep = 0
+		const totalSteps = duration / frameRate
+
+		const slotMachine = setInterval(() => {
+			let result = ''
+
+			finalDigits.forEach((digit, index) => {
+				const lockStep = totalSteps * ((index + 1) / finalDigits.length)
+
+				if (currentStep >= lockStep) {
+					result += digit
+				} else {
+					result += Math.floor(Math.random() * 10)
+				}
+			})
+
+			errorTitle.innerText = result
+			currentStep++
+
+			if (currentStep > totalSteps) {
+				clearInterval(slotMachine)
+				errorTitle.innerText = '404'
+			}
+		}, frameRate)
+	}
+})
