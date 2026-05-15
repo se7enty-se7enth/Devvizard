@@ -1,6 +1,11 @@
 @use '../core/variables' as v;
 @use '../core/mixins' as m;
 
+*::selection {
+	background: rgba(255, 255, 255, 0.3);
+	color: #fff;
+}
+
 body {
 	font-family: var(--main-font);
 	color: var(--color-light);
