@@ -40,6 +40,7 @@
 		@include m.hover {
 			transform: scale(1.01);
 			z-index: 10;
+			box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 
 			.portfolio-card__glow {
 				opacity: 1;
