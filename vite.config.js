@@ -8,6 +8,7 @@ export default defineConfig({
 				main: resolve(__dirname, 'index.html'),
 				privacy: resolve(__dirname, 'privacy.html'),
 				notfound: resolve(__dirname, '404.html'),
+				projects: resolve(__dirname, 'projects/index.html'),
 			},
 		},
 	},
