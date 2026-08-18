@@ -1,14 +1,30 @@
-# Зависимости библиотек (тяжелая папка, восстанавливается через npm i)
+# Зависимости
 node_modules/
 
-# Папка готовой сборки (генерируется командой npm run build)
+# Папка финальной сборки
 dist/
+dist-ssr/
 
-# Локальные настройки редактора и системы
-.vscode/
+# Локальные конфиги редакторов
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Системные файлы мусора
 .DS_Store
 Thumbs.db
 
-# Логи ошибок npm
-*.log
+# Логи сборщиков
 npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Скомпилированные артефакты (на случай ручного запуска sass)
+css/main.css
+css/main.css.map
