@@ -1,19 +1,21 @@
-// 1. Подключаем SCSS-стили сайта
+// 1. Стили библиотек (подключаем ПЕРВЫМИ)
+import 'swiper/css/bundle'
+
+// 2. Твои стили проекта (подключаем ВТОРЫМИ, чтобы они были главнее библиотек)
 import '../css/main.scss'
 
-// 2. Подключаем Swiper и его стили из npm
-import Swiper from 'swiper'
-import 'swiper/css'
-import 'swiper/css/pagination'
-
-// 3. Подключаем GSAP и ScrollTrigger из npm
+// 3. Библиотеки JS
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import Lenis from 'lenis'
+import Swiper from 'swiper/bundle'
+
+// Регистрация плагина анимаций
 gsap.registerPlugin(ScrollTrigger)
 
-// 4. Подключаем Lenis и его стили
-import Lenis from 'lenis'
-import 'lenis/dist/lenis.css'
+// ==========================================
+// ДАЛЕЕ ВЕСЬ ТВОЙ КОД БЕЗ ИЗМЕНЕНИЙ
+// ==========================================
 
 /* ==========================================================================
    1. ИНИЦИАЛИЗАЦИЯ ПЛАВНОГО СКРОЛЛА (LENIS)
