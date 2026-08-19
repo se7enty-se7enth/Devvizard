@@ -7,7 +7,7 @@ function getHtmlInputs(dir = __dirname, entries = {}) {
 
 	for (const file of files) {
 		if (file.isDirectory()) {
-			if (!['node_modules', 'dist', '.git', '.github'].includes(file.name)) {
+			if (!['node_modules', 'dist', '.git', '.github', 'public'].includes(file.name)) {
 				getHtmlInputs(resolve(dir, file.name), entries)
 			}
 		} else if (file.isFile() && file.name.endsWith('.html')) {
