@@ -161,8 +161,8 @@
 	position: absolute;
 	background: rgba(255, 255, 255, 0.03);
 	border: 1px solid rgba(255, 255, 255, 0.08);
-	backdrop-filter: blur(15px);
 	-webkit-backdrop-filter: blur(15px);
+	backdrop-filter: blur(15px);
 	border-radius: 24px;
 	padding: 25px;
 	will-change: transform;
